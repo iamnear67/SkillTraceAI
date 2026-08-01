@@ -1,107 +1,125 @@
-# SkillTrace AI — Multimodal Competency Verification & Entrance Feasibility Platform
+# 🧠 SkillTrace AI — Multimodal Student Competency Vectorization & Career Feasibility Engine
 
-**SkillTrace AI** is an end-to-end AI platform that turns scattered student achievements, competition certificates, and diagnostic test results into verifiable skill intelligence, career roadmaps, and entrance feasibility predictions.
+> **SFHS C.O.D.E. Hack 7.0 (2026)** — Sub-Theme 2: *AI for Smarter Learning*
 
----
-
-## 🌟 Architecture & Application Multi-Page Layout
-
-The platform is structured into three primary multi-page views served seamlessly via Vite:
-
-1. 🏠 **Main Website Landing Page (`index.html` / `http://localhost:5173/`)**
-   - The primary home screen featuring the **SkillTrace AI** Vision AI showcase, hackathon background, problem & solution overview, and interactive feature cards.
-   - Enlarged, prominent header buttons to launch the **Dashboard** and **Entrance Engine**.
-
-2. 📊 **Application Dashboard (`dashboard.html` / `http://localhost:5173/dashboard.html`)**
-   - **Floating Profile Banner**: Toggle between **Demo Profile (Arjun Sharma)** and **Custom Profile ("Make your own")**.
-   - **Hash Placeholder Mode**: Displays `##%`, `AIR ###`, and `##` placeholders when custom profile has no uploaded credentials or test entries.
-   - **Direct Metric Mapping**: Dynamically updates KPIs and competency vectors as soon as data is entered or uploaded in the Entrance Engine.
-   - **PDF CV Export**: One-click student competency CV report export (`📄 Download PDF / CV`).
-
-3. 🧪 **Entrance Module Engine (`entrance.html` / `http://localhost:5173/entrance.html`)**
-   - 5 streamlined modes:
-     1. **Mode 1: AIR & Tasklist** — Expected All India Rank predictions and adaptive study schedule.
-     2. **Mode 2: Psychometric Test** — Aptitude vector analysis and interest profiling.
-     3. **Mode 3: Prior Knowledge Diagnostic** — 15-class academic baseline test.
-     4. **Mode 4: Entrance Module** — 5 unified sub-tabs:
-        - *Learning & Decay Analysis* (Forgetting curve & retention speed calibration)
-        - *TeachBack AI Evaluator* (Socratic explanation evaluation & misconception detection)
-        - *AI Career Guidance* (Skill-gap roadmaps & career matching)
-        - *Parameters Pipeline* (Direct parameter sliders connected to Python backend engines)
-        - *Competency Radar & Feasibility* (Live SVG/Recharts competency chart + target exam AIR matrix)
-     5. **Mode 5: Scholarships** — Financial aid and grant finder.
+**SkillTrace AI** is a multimodal intelligence platform designed to eliminate manual credential entry for secondary school students. By integrating Multimodal Vision AI with Socratic evaluation engines, SkillTrace AI parses competition certificates, academic marksheets, and diagnostic test metrics in real time—mapping candidate 5-pillar competency vectors directly to target career paths, university streams, and All-India Rank (AIR) feasibility predictions.
 
 ---
 
-## 🚀 Quick Start Guide
+## 🌟 Key Features
+
+1. **Multimodal Vision AI Certificate Intelligence**:
+   - Parses raw photos, PDFs, and competition marksheets using OCR intelligence.
+   - Extracts validated credentials, issuing authorities, and date markers without hallucinated data.
+
+2. **Socratic TeachBack AI Evaluator**:
+   - Tests student conceptual understanding by probing for student-led explanations.
+   - Identifies underlying misconceptions, computes a mastery score (0-100%), and provides vivid real-world analogies.
+
+3. **5-Pillar Competency Vector Analysis**:
+   - Evaluates students across Analytical Reasoning, Theoretical Math, Applied Physics, Verbal Logic, Spatial Reasoning, and Pattern Recognition.
+   - Dynamically updates live SVG/Recharts Radar charts and AIR feasibility matrices.
+
+4. **Interactive Dashboard & Hash Mode**:
+   - **Demo Profile Mode**: Pre-loaded student personas (Arjun Sharma, Priya Patel, Ananya Roy, Rohan Verma, Kabir Das).
+   - **Custom Hash Mode**: In "Make your own" mode without uploaded certificates, metrics render as **editable hash placeholders (`Welcome back, ##### 👋`, `##%`, `AIR ###`)** that users can click and edit directly on-screen.
+
+5. **Direct Data Mapping & PDF CV Generator**:
+   - Inputs and parameter adjustments in the Entrance Engine instantly map to Dashboard KPIs.
+   - One-click **📄 Download PDF / CV** export formatting student competency portfolios for university admissions.
+
+6. **Unified Multi-Page Architecture**:
+   - **Home Screen (`index.html`)**: Landing page with hackathon theme, problem/solution, and architecture.
+   - **Dashboard (`dashboard.html`)**: Main app with demo profile toggle, editable hashes, and PDF download.
+   - **Entrance Engine (`entrance.html`)**: 5-mode test engine (AIR Tasklist, Psychometric Test, Prior Diagnostic, Entrance Module, Scholarships).
+
+---
+
+## 🚀 Setup Instructions
 
 ### Prerequisites
-- **Node.js**: v18+
-- **Python**: 3.9+
+- **Node.js**: v18.0.0 or higher
+- **Python**: v3.9+ (For optional local FastAPI AI backend)
 
-### 1. Install Dependencies & Start Frontend Dev Server
+### 1. Installation
 
 ```bash
-# Install NPM packages
-npm install
+# Clone the repository
+git clone https://github.com/iamnear67/SkillTraceAI.git
+cd SkillTraceAI
 
-# Start Vite Multi-Page Dev Server
+# Install Node dependencies
+npm install
+```
+
+### 2. Run Frontend Development Server
+
+```bash
+# Start Vite multi-page server
 npm run dev
 ```
 
-Open **`http://localhost:5173/`** in your browser.
+Open **`http://localhost:5173`** in your browser.
 
-### 2. Start Python FastAPI AI Backend (Optional)
+### 3. Run FastAPI AI Service (Optional Backend)
 
 ```bash
-# Navigate to server directory
+# Navigate to backend directory
 cd server
 
-# Install Python requirements
+# Install Python packages
 pip install -r requirements.txt
 
-# Start FastAPI service
+# Start FastAPI server
 python main.py
 ```
 
-The FastAPI AI service will run on `http://localhost:8000`.
+FastAPI server runs on **`http://localhost:8000`**.
 
 ---
 
-## 📂 Project Structure
+## 👥 Team Details
 
-```
-webpage-add/
-├── index.html               # Main Website Landing Page (Home Screen)
-├── dashboard.html           # Main Application Dashboard
-├── entrance.html            # Entrance Module & Feasibility Engine (React App)
-├── styles.css               # Global SkillTrace AI Dark Glassmorphic Stylesheet
-├── app.js                   # Landing Page Controller & Animations
-├── dashboard.js             # Dashboard Controller, Demo Switcher & Metric Mapper
-├── api.js                   # API Client & Backend Integration Bridge
-├── vite.config.ts           # Vite Multi-Page Configuration
-├── package.json             # NPM Dependencies & Scripts
-├── src/                     # React Application Source Code
-│   ├── App.tsx              # Top-level navigation & Mode Switcher
-│   ├── components/          # React Components
-│   │   ├── ModeNav.tsx               # 5-Mode Navigation Bar
-│   │   ├── Mode5EntranceModule.tsx   # 5-Subtab Entrance Engine
-│   │   ├── TeachBackEngine.tsx       # Socratic AI Evaluator
-│   │   ├── CareerRecommendationView.tsx # AI Career Guidance
-│   │   └── AuthModal.tsx             # Firebase Auth Modal
-│   └── utils/               # Utilities & Firebase Auth
-└── skill-trace/             # Synchronized Python Backend & Core Sub-repository
-```
+| Team Role | Identifier | Responsibilities |
+| :--- | :--- | :--- |
+| **Team Lead & Core AI Engineer** | **1001A** | Vision AI Certificate Parser, Groq LLM API Integration, Socratic TeachBack Prompting Architecture |
+| **Frontend Architect & UI/UX** | **1001B** | Multi-Page Vite Setup, Dark Glassmorphism Design System, Recharts Competency Radar, Editable Hash Mode |
+| **Full Stack & Backend Developer** | **1001C** | FastAPI Router, Parameters Pipeline (`competency_service.py`, `normalizer.py`), LocalStorage Persistence |
+| **QA, Data & Documentation** | **1001D** | Dataset compiling (`allExams.ts`), Psychometric engine testing, Hackathon documentation, Presentation |
 
 ---
 
-## 🛠️ Key Technologies
+## 🤖 AI Usage Disclosure
 
-- **Frontend**: React 19, TypeScript, Vite 6, Framer Motion, Recharts, Lucide React, FontAwesome 6.
-- **Styling**: Vanilla CSS3, Glassmorphism, CSS Variables, Responsive `@media print` queries.
-- **Backend / AI**: FastAPI, Python 3, Groq API (`llama-3.3-70b-versatile`), Firebase Authentication.
+SkillTrace AI uses artificial intelligence responsibly and strictly within defined boundaries:
+
+1. **Large Language Models (LLMs)**:
+   - **Groq API (`llama-3.3-70b-versatile`)**: Powered by low-latency inference for real-time Socratic TeachBack evaluations, misconception detection, and dynamic career rationale synthesis.
+2. **Vision AI / OCR Intelligence**:
+   - Automated certificate metadata extraction parsing raw text, issuer validation, and skills mapping.
+3. **Rule Engine & Vector Normalizer**:
+   - Deterministic mathematical normalization models (`normalizer.py`, `scorer.py`) calculating competency scores to ensure non-hallucinated AIR rank estimation.
+
+---
+
+##💡 Why SkillTrace AI is a Worthwhile Hackathon Innovation
+
+### The Problem
+Secondary school students possess scattered achievements across coding competitions, Olympiads, science fairs, and online courses. Current admission and guidance portals rely on **manual self-reporting**, leading to:
+- High friction and loss of credential verification.
+- Static, non-adaptive career recommendations that ignore real candidate trajectory.
+- Inability to estimate competitive entrance exam feasibility (AIR ranks) before taking high-stakes exams.
+
+### The Innovation
+SkillTrace AI bridges this critical gap through **three novel architectural breakthroughs**:
+
+1. **Zero-Friction Vision Verification**: Instead of filling out endless forms, students simply upload photo/PDF certificates. Vision AI parses and validates credentials into structured competency vectors automatically.
+2. **Interactive Socratic TeachBack**: Unlike passive quizzes, SkillTrace AI forces active recall. Students explain concepts in their own words, while the AI detects conceptual gaps, calculates comprehension depth, and adjusts study tasklists dynamically.
+3. **Real-Time Competency-to-AIR Mapping**: SkillTrace AI translates 5-pillar skill vectors into expected All-India Ranks (AIR) across top competitive exams (JEE, NEET, CUET, SAT, NDA) with actionable skill-gap roadmaps.
+
+By transforming unstructured student accomplishments into a single, verifiable, and predictive intelligence dashboard, **SkillTrace AI** empowers students and educators with actionable insights for smarter, personalized learning.
 
 ---
 
 ## 📄 License
-Privately developed for **SkillTrace AI** Engine.
+Developed for **SFHS C.O.D.E. Hack 7.0 (2026)**.
