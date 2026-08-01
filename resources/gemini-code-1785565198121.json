@@ -1,0 +1,30 @@
+{
+  "system_context": {
+    "engine_name": "Exam Feasibility & Optimization Engine (MVP)",
+    "orchestration_mode": "MULTI_STAGE_COGNITIVE_CALIBRATION",
+    "primary_objective": "Evaluate student learning speed (alpha), memory decay (lambda), and class-specific weight multipliers across all 15 cognitive classes, then compute daily study token budgets."
+  },
+  "execution_pipeline": [
+    {
+      "step": 1,
+      "agent": "Phase1_Synthetic_Evaluator",
+      "task": "Administer Kyrosian Synthetic Module. Calculate raw_alpha, raw_lambda, and base_retention."
+    },
+    {
+      "step": 2,
+      "agent": "Phase2_Diagnostic_Calibrator",
+      "task": "Administer 15-class micro-diagnostic battery. Compute class weight multipliers (W_i, D_i)."
+    },
+    {
+      "step": 3,
+      "agent": "Phase3_Token_Allocator",
+      "task": "Compute calibrated_alpha, calibrated_lambda, and recommended_daily_tokens for each class."
+    }
+  ],
+  "mathematical_formulas": {
+    "calibrated_alpha": "alpha_global * W_i",
+    "calibrated_lambda": "lambda_global * D_i",
+    "retention_curve": "R(t) = A0 * exp(-lambda_i * t)",
+    "class_daily_tokens": "Math.min((calibrated_alpha * 4.2) / (1 + calibrated_lambda), max_daily_tokens * class_weight)"
+  }
+}

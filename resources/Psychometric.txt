@@ -1,0 +1,59 @@
+[Q1] When facing a complex 500-word puzzle with multiple interconnected constraints, what is your initial instinct?
+     A) Translate text immediately into symbolic logic, equations, or truth tables.  [+1 V_QUANT, +1 V_MGMT]
+     B) Systematically read every word, looking for hidden assumptions or linguistic loopholes.  [+1 V_LAW]
+     C) Look for shortcuts, eliminate obviously invalid patterns, and test boundary conditions.  [+1 V_GEN]
+     D) Break the puzzle down into smaller sub-cases and solve them sequentially.  [+1 V_MGMT]
+
+[Q2] You are presented with a completely unfamiliar theoretical framework (e.g., a made-up taxation model). How do you prefer to master it?
+     A) Derive its core formulas from first principles.  [+1 V_QUANT]
+     B) Analyze precedent cases where the model was applied and extract underlying rules.  [+1 V_LAW]
+     C) Apply the framework to numerical examples to observe input-output behavior.  [+1 V_MGMT]
+     D) Scan the rules quickly to understand the basic structure and move straight to practice.  [+1 V_GEN]
+
+[Q3] In a 60-minute test with 60 questions, what is your natural pacing strategy?
+     A) Move fast, answer easier questions instantly, and skim past complex ones.  [+1 V_GEN, +1 V_MGMT]
+     B) Work through questions sequentially with high precision, minimizing unattempted items.  [+1 V_LAW]
+     C) Prioritize high-value, complex problems that require deep logical reasoning.  [+1 V_QUANT]
+     D) Adjust your pace dynamically based on time remaining per section.  [+1 V_MGMT]
+
+[Q4] What type of error frustrates you the most during self-analysis?
+     A) Calculation or arithmetic slips in a problem you understood completely.  [+1 V_QUANT]
+     B) Misinterpreting a nuanced word in a passage that changed the context.  [+1 V_LAW]
+     C) Running out of time on questions you knew how to solve.  [+1 V_GEN]
+     D) Making a flawed decision due to missing subtle connections between data sets.  [+1 V_MGMT]
+
+[Q5] Which environment feels most comfortable during a high-stakes exam section?
+     A) Solving dense, multi-variable mathematical proofs or physics models.  [+1 V_QUANT]
+     B) Synthesizing dense, conflicting text passages on law, philosophy, or social policy.  [+1 V_LAW]
+     C) Interpreting charts, business case studies, and quantitative data trends.  [+1 V_MGMT]
+     D) Switching rapidly between varied topics (Vocabulary, Logic, GK, Arithmetic).  [+1 V_GEN]
+
+[Q6] When dealing with static, memory-heavy topics (e.g., historical dates, chemical properties, legal articles), how do you retain information best?
+     A) Map facts into structural logic diagrams or flowcharts.  [+1 V_QUANT]
+     B) Embed information within broader narratives or contextual passages.  [+1 V_LAW]
+     C) Use flashcards, spaced-repetition schedules, and quick recall drills.  [+1 V_GEN]
+     D) Focus only on key facts that directly impact outcomes and ignore surrounding noise.  [+1 V_MGMT]
+
+[Q7] When a problem contains redundant or irrelevant information, what do you usually do?
+     A) Systematically filter out extra parameters using mathematical models.  [+1 V_QUANT]
+     B) Interrogate why the extra information was included and check for intentional trickery.  [+1 V_LAW]
+     C) Ignore the extra data immediately and focus only on the core question.  [+1 V_GEN, +1 V_MGMT]
+     D) Map all given data visually before deciding what to discard.  [+1 V_MGMT]
+
+[Q8] How do you handle ambiguity in a test question where two options feel plausible?
+     A) Re-verify constraints using strict deduction to eliminate one option.  [+1 V_QUANT]
+     B) Evaluate textual evidence to determine which option is most defensible.  [+1 V_LAW]
+     C) Estimate probabilities based on question patterns and pick the safer option.  [+1 V_MGMT]
+     D) Trust your intuition, make a fast calculated guess, and move on.  [+1 V_GEN]
+
+[Q9] What kind of cognitive task gives you the strongest sense of flow?
+     A) Debugging a multi-step quantitative calculation until it balances perfectly.  [+1 V_QUANT]
+     B) Deconstructing a complex legal or philosophical argument to find its fatal flaw.  [+1 V_LAW]
+     C) Extracting actionable insights from complex graphs, tables, and statistics.  [+1 V_MGMT]
+     D) Rapidly solving dozens of short, varied puzzles in quick succession.  [+1 V_GEN]
+
+[Q10] What is your main priority when selecting target exams?
+     A) Technical depth, domain specialization, and problem-solving rigor.  [+1 V_QUANT]
+     B) Policy impact, analytical argumentation, and structured reasoning.  [+1 V_LAW]
+     C) Leadership potential, management strategy, and institutional reputation.  [+1 V_MGMT]
+     D) Broad career options, versatility, and maximizing total acceptance probabilities.  [+1 V_GEN]

@@ -1,0 +1,28 @@
+{
+  "antigravity_output_telemetry": {
+    "student_id": "STU_2026_9941",
+    "global_metrics": {
+      "raw_alpha_speed": 42.5,
+      "raw_lambda_decay": 0.038,
+      "total_daily_token_budget": 180
+    },
+    "class_evaluations": [
+      {
+        "class_id": "COG_01",
+        "class_name": "Conceptual Mathematics",
+        "calibrated_alpha": 38.25,
+        "calibrated_lambda": 0.041,
+        "recommended_daily_tokens": 25,
+        "confidence_score": 0.92
+      },
+      {
+        "class_id": "COG_04",
+        "class_name": "Reading Comprehension",
+        "calibrated_alpha": 51.0,
+        "calibrated_lambda": 0.025,
+        "recommended_daily_tokens": 35,
+        "confidence_score": 0.96
+      }
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "antigravity_input_payload": {
+    "module_meta": {
+      "version": "2.0",
+      "synthetic_domain": "Kyrosian Kinetic-Aether Dynamics",
+      "total_classes_measured": 15
+    },
+    
+    "phase_1_synthetic_rules": [
+      {
+        "rule_id": "RULE_BASE5_SHIFT",
+        "title": "Base-5 Vector Shift (Phi Operator)",
+        "content": "All numbers are in Base-5. Even digits (0, 2, 4) add 2 in Base-5. Odd digits (1, 3) multiply by 3 in Base-5."
+      },
+      {
+        "rule_id": "RULE_THETA_INVERSION",
+        "title": "Inversion Matrix (Theta State)",
+        "content": "Preceding symbol Theta reverses digit order AFTER Phi transformation is applied."
+      },
+      {
+        "rule_id": "RULE_LOGIC_OPS",
+        "title": "Non-Boolean Operators (Lambda, Psi, Delta)",
+        "content": "Lambda(A, B) = TRUE if (A+B)_5 is prime, FALSE if even, Omega (Null-Loop) otherwise. Psi(A, B) = TRUE if A > B and B has an odd digit. Delta = TRUE if exactly one operand is Omega."
+      },
+      {
+        "rule_id": "RULE_CASCADE_DECAY",
+        "title": "Omega-Cascade Precedence Inversion",
+        "content": "Two or more Omega states invert execution order to right-to-left, overriding standard precedence."
+      }
+    ],
+
+    "phase_2_diagnostic_battery": [
+      {
+        "class_id": "COG_01",
+        "class_name": "Conceptual Mathematics",
+        "item_id": "DIAG_C01",
+        "prompt": "Let f(x) = x^2 - 3 under Base-5 arithmetic. If x = 12_5, what is f(x) in Base-5?",
+        "options": ["A) 31_5", "B) 41_5", "C) 101_5", "D) 22_5"],
+        "correct_option": "A",
+        "weight_multiplier_target": "W_1"
+      },
+      {
+        "class_id": "COG_02",
+        "class_name": "Pattern Recognition & Spatial Logic",
+        "item_id": "DIAG_C02",
+        "prompt": "Complete the matrix progression: [2, 4, 8], [3, 9, 27], [4, 16, ?]",
+        "options": ["A) 32", "B) 64", "C) 48", "D) 52"],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_2"
+      },
+      {
+        "class_id": "COG_03",
+        "class_name": "Memory-Heavy & Recall",
+        "item_id": "DIAG_C03",
+        "prompt": "Recall Phase 1: Under Kyrosian rules, what does the Delta operator evaluate to if EXACTLY one operand is Omega?",
+        "options": ["A) FALSE", "B) TRUE", "C) Omega", "D) Null"],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_3"
+      },
+      {
+        "class_id": "COG_04",
+        "class_name": "Reading Comprehension & Critical Analysis",
+        "item_id": "DIAG_C04",
+        "prompt": "Passage: 'While statutory laws provide structural clarity, judicial discretion prevents systemic rigidity.' What is the author's primary stance?",
+        "options": ["A) Statutes are useless.", "B) Discretion complements formal law.", "C) Judges should ignore laws.", "D) Rigidity is desirable."],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_4"
+      },
+      {
+        "class_id": "COG_05",
+        "class_name": "Formula-Based Execution",
+        "item_id": "DIAG_C05",
+        "prompt": "Given Velocity V = u + at, with u = 5 m/s, a = 2.5 m/s^2, t = 12s. Calculate V.",
+        "options": ["A) 30", "B) 35", "C) 25", "D) 40"],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_5"
+      },
+      {
+        "class_id": "COG_06",
+        "class_name": "Data Interpretation & Quantitative Reasoning",
+        "item_id": "DIAG_C06",
+        "prompt": "Table: Sales Q1=100, Q2=150, Q3=200, Q4=250. What is the percentage increase from Q1 to Q4?",
+        "options": ["A) 100%", "B) 150%", "C) 250%", "D) 200%"],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_6"
+      },
+      {
+        "class_id": "COG_07",
+        "class_name": "Analytical Decision Making & Legal Principles",
+        "item_id": "DIAG_C07",
+        "prompt": "Principle: A agreement without consideration is void. Fact: A promises B $100 as a gift. Is it enforceable?",
+        "options": ["A) Yes, because it is a promise.", "B) No, because consideration is absent.", "C) Yes, if written.", "D) Depends on court."],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_7"
+      },
+      {
+        "class_id": "COG_08",
+        "class_name": "Symbolic & Abstraction Reasoning",
+        "item_id": "DIAG_C08",
+        "prompt": "If # represents 'square the sum of operands', evaluate 2 # 3.",
+        "options": ["A) 13", "B) 25", "C) 10", "D) 36"],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_8"
+      },
+      {
+        "class_id": "COG_09",
+        "class_name": "Processing Speed & Mental Agility",
+        "item_id": "DIAG_C09",
+        "prompt": "Speed Test (10s limit): 17 + 28 - 14 = ?",
+        "options": ["A) 31", "B) 33", "C) 29", "D) 35"],
+        "correct_option": "A",
+        "weight_multiplier_target": "W_9"
+      },
+      {
+        "class_id": "COG_10",
+        "class_name": "Multi-step Logical Reasoning",
+        "item_id": "DIAG_C10",
+        "prompt": "A is older than B. C is younger than B. D is older than A. Who is the youngest?",
+        "options": ["A) A", "B) B", "C) C", "D) D"],
+        "correct_option": "C",
+        "weight_multiplier_target": "W_10"
+      },
+      {
+        "class_id": "COG_11",
+        "class_name": "Verbal Analogy & Linguistic Precision",
+        "item_id": "DIAG_C11",
+        "prompt": "Scalpel : Surgeon :: Gavel : ?",
+        "options": ["A) Lawyer", "B) Judge", "C) Doctor", "D) Carpenter"],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_11"
+      },
+      {
+        "class_id": "COG_12",
+        "class_name": "Spatial & Non-Verbal Reasoning",
+        "item_id": "DIAG_C12",
+        "prompt": "If a square paper is folded in half twice and a circular hole is punched in the center, how many holes appear when unfolded?",
+        "options": ["A) 1", "B) 2", "C) 4", "D) 8"],
+        "correct_option": "C",
+        "weight_multiplier_target": "W_12"
+      },
+      {
+        "class_id": "COG_13",
+        "class_name": "Critical Deduction & Argument Flaws",
+        "item_id": "DIAG_C13",
+        "prompt": "'All cars have wheels. A bicycle has wheels. Therefore, a bicycle is a car.' What flaw is present?",
+        "options": ["A) Undistributed Middle", "B) Circular Logic", "C) Ad Hominem", "D) Post Hoc"],
+        "correct_option": "A",
+        "weight_multiplier_target": "W_13"
+      },
+      {
+        "class_id": "COG_14",
+        "class_name": "Rule Decay & Syntax Handling",
+        "item_id": "DIAG_C14",
+        "prompt": "Recall Phase 1: When two Omega states appear, what happens to evaluation direction?",
+        "options": ["A) Halts", "B) Left-to-Right", "C) Right-to-Left", "D) Random"],
+        "correct_option": "C",
+        "weight_multiplier_target": "W_14"
+      },
+      {
+        "class_id": "COG_15",
+        "class_name": "Quantitative Approximation & Estimation",
+        "item_id": "DIAG_C15",
+        "prompt": "Estimate within 5 seconds: 498 * 203 ≈ ?",
+        "options": ["A) 10,000", "B) 100,000", "C) 1,000,000", "D) 50,000"],
+        "correct_option": "B",
+        "weight_multiplier_target": "W_15"
+      }
+    ]
+  }
+}

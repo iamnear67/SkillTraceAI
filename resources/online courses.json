@@ -1,0 +1,223 @@
+{
+  "dataset_title": "Vocational Courses, Online Skilling & College Scholarships - Expanded Program Data",
+  "purpose": "Populate a village profile's 'vocational training & scholarship access' section, mapped to SDG 4 (Quality Education), SDG 8 (Decent Work & Economic Growth), and related Sustainable Development Goals.",
+  "vocational_courses": [
+    {
+      "course_id": "iti_001",
+      "name": "ITI (Industrial Training Institute) Trades",
+      "run_by": "State Council for Vocational Training (SCVT) / National Council for Vocational Training (NCVT), under state Labour/Skill Development Departments",
+      "eligibility": "8th, 10th, or 12th pass (varies by trade); minimum age typically 14, some states allow up to 40",
+      "duration": "6 months to 2 years depending on trade",
+      "entry_route": "State-level admission process via SCVT/Labour Department each year",
+      "sample_trades": [
+        "Electrician",
+        "Fitter",
+        "Welder",
+        "Automobile Mechanic",
+        "Computer Operator & Programming Assistant (COPA)",
+        "Plumber",
+        "Draughtsman"
+      ],
+      "progression_pathways": [
+        "Lateral entry into 2nd year of Polytechnic Diploma",
+        "CITS (Craft Instructor Training Scheme) to become an ITI instructor",
+        "B.Voc / BBA / BCA / B.Tech via LEET"
+      ],
+      "cost": "Government ITIs: low/subsidized fees; private ITIs vary",
+      "sdg_tags": [4, 8],
+      "notes": "Fastest route to employment among vocational options - often job-ready in 6 months to 2 years."
+    },
+    {
+      "course_id": "polytechnic_diploma_002",
+      "name": "Polytechnic Diploma (Engineering & allied trades)",
+      "run_by": "State Directorate of Technical Education, AICTE-approved polytechnic colleges",
+      "eligibility": "10th or 12th pass depending on state/stream",
+      "duration": "3 years (typically), 2 years via lateral entry after ITI",
+      "entry_route": "State polytechnic common entrance test (varies by state) or direct admission",
+      "sample_streams": [
+        "Mechanical Engineering",
+        "Civil Engineering",
+        "Electrical Engineering",
+        "Computer Engineering",
+        "Electronics & Communication"
+      ],
+      "progression_pathways": [
+        "Lateral entry into 2nd year B.Tech/B.E."
+      ],
+      "cost": "Government polytechnics: low fees (~few thousand INR/year); private polytechnics higher",
+      "sdg_tags": [4, 8, 9],
+      "notes": "Eligible for AICTE Pragati/Saksham scholarships if AICTE-approved institution."
+    },
+    {
+      "course_id": "pmkvy_003",
+      "name": "PMKVY (Pradhan Mantri Kaushal Vikas Yojana) Short-Term Training",
+      "run_by": "Ministry of Skill Development and Entrepreneurship (MSDE), National Skill Development Corporation (NSDC)",
+      "eligibility": "Varies by job role; generally open to school dropouts and unemployed youth, no strict minimum qualification for many trades",
+      "duration": "Typically 2-3 months per short-term course (job-role dependent)",
+      "entry_route": "Enroll through authorized PMKVY training centers (list on official PMKVY portal)",
+      "industry_verticals_count": 29,
+      "courses_available_count": "1200+ job roles across verticals (list amended periodically by Ministry)",
+      "cost": "Free training under the scheme",
+      "stipend_note": "Apprenticeship stipends up to approx. ₹8,000/month for select courses, per aggregator reporting - verify current rate on official PMKVY/NSDC portal before quoting.",
+      "sdg_tags": [4, 8, 1],
+      "official_url_note": "Search 'PMKVY' on the Skill India portal (www.skillindia.gov.in) for the current official course list, since job roles and fee-free status are updated periodically by the Ministry.",
+      "notes": "Best fit for rural/village-level short-term skilling in a hackathon village profile - free, short-duration, employment-oriented."
+    },
+    {
+      "course_id": "bvoc_004",
+      "name": "B.Voc (Bachelor of Vocation) Degree Programs",
+      "run_by": "UGC-approved universities/colleges under the National Skills Qualification Framework (NSQF)",
+      "eligibility": "12th pass (any stream, subject to institution's criteria)",
+      "duration": "3 years (with exit options: Diploma after 1 year, Advanced Diploma after 2 years)",
+      "entry_route": "Direct admission via participating college/university",
+      "sample_specializations": [
+        "Retail Management",
+        "Food Processing",
+        "Software Development",
+        "Healthcare/Paramedical Assistance",
+        "Tourism & Hospitality",
+        "Renewable Energy"
+      ],
+      "cost": "Varies by institution; generally lower than equivalent professional degree programs",
+      "sdg_tags": [4, 8],
+      "notes": "Combines vocational skill training with a formal UGC-recognized degree, useful bridge between ITI-level skilling and full university education."
+    },
+    {
+      "course_id": "ddu_gky_005",
+      "name": "DDU-GKY (Deen Dayal Upadhyaya Grameen Kaushalya Yojana)",
+      "run_by": "Ministry of Rural Development (MoRD), Government of India",
+      "eligibility": "Rural youth aged 15-35 years from poor families (up to 45 years for SC/ST/Women/PWD)",
+      "duration": "3 to 12 months (skill training + placement mandatory)",
+      "entry_route": "Enrollment through District Rural Development Agencies (DRDA) or authorized PIAs (Project Implementation Agencies)",
+      "sample_specializations": [
+        "Solar PV Installer",
+        "Microfinance Executive",
+        "Garment Construction",
+        "BPO/Customer Care Executive",
+        "Hospitality Assistant"
+      ],
+      "cost": "Free of cost (fully funded by Government, includes free boarding & lodging)",
+      "sdg_tags": [1, 4, 5, 8],
+      "notes": "Specifically targeted at rural youth with guaranteed post-training placement assistance."
+    },
+    {
+      "course_id": "rseti_006",
+      "name": "RSETI (Rural Self Employment Training Institutes)",
+      "run_by": "Lead Banks in partnership with Ministry of Rural Development (MoRD) and State Governments",
+      "eligibility": "Rural youth aged 18-45 years with an inclination toward self-employment",
+      "duration": "6 to 45 days (short-term intensive practical skilling)",
+      "entry_route": "Direct application at district RSETI centers",
+      "sample_specializations": [
+        "Dairy Farming & Vermicomposting",
+        "Mobile Phone Repairing",
+        "Beauty Parlour Management",
+        "Bee Keeping",
+        "Tailoring & Dress Designing"
+      ],
+      "cost": "Free training with free food and accommodation provided",
+      "sdg_tags": [1, 4, 8],
+      "notes": "Focuses on entrepreneurship development and linking trainees to bank credit for setting up micro-enterprises."
+    },
+    {
+      "course_id": "swayam_online_007",
+      "name": "SWAYAM Free Online Certification Courses",
+      "run_by": "Ministry of Education, NPTEL, IGNOU, CEC, NCERT, IIM-B, NITTTR",
+      "eligibility": "Open to all (Students, School Dropouts, Professionals, Village Youth)",
+      "duration": "4 to 12 weeks per course (self-paced/guided online modules)",
+      "entry_route": "Online self-registration at swayam.gov.in",
+      "sample_specializations": [
+        "Digital Marketing & E-Commerce",
+        "Basic Accounting & Tally",
+        "Python Programming & Data Analytics",
+        "Agricultural Technology & Organic Farming",
+        "Office Automation Tools"
+      ],
+      "cost": "Free to learn; nominal exam fee (~₹1,000) only if requesting a proctored certificate",
+      "sdg_tags": [4, 8, 9],
+      "notes": "Ideal for rural youth with internet access seeking high-quality self-paced learning from top educators."
+    },
+    {
+      "course_id": "pm_vishwakarma_008",
+      "name": "PM Vishwakarma Skill Enhancement Scheme",
+      "run_by": "Ministry of Micro, Small and Medium Enterprises (MSME) & MSDE",
+      "eligibility": "Artisans and craftspeople working with hands and tools in 18 traditional trades (age 18+)",
+      "duration": "Basic training: 5-7 days; Advanced training: 15 days or more",
+      "entry_route": "CSC (Common Service Centre) registration with Gram Panchayat verification",
+      "sample_specializations": [
+        "Carpenter (Suthar)",
+        "Blacksmith (Lohar)",
+        "Armourer",
+        "Locksmith",
+        "Mason (Rajmistri)",
+        "Cobbler / Footwear Artisan",
+        "Tailor (Darzi)"
+      ],
+      "cost": "Free training + ₹500/day stipend during training + ₹15,000 toolkit incentive",
+      "sdg_tags": [1, 8, 10, 11],
+      "notes": "Provides credit support up to ₹3 Lakh at concessional interest rate (5%) along with skill upgrading and market linkage."
+    }
+  ],
+  "college_scholarships": [
+    {
+      "scholarship_id": "aicte_pragati_001",
+      "name": "AICTE Pragati Scholarship for Girls",
+      "run_by": "All India Council for Technical Education (AICTE)",
+      "eligibility": "Girl students admitted to 1st year (or 2nd year via lateral entry) of a technical degree/diploma course in an AICTE-approved institution; max 2 girls per family; family income up to ₹8,00,000/year",
+      "amount_per_year_inr": 50000,
+      "number_of_scholarships_per_year": 5000,
+      "coverage": "5,000 scholarships/year for degree courses + 5,000/year for diploma courses",
+      "disbursement": "Direct Benefit Transfer (DBT) to bank account",
+      "application_portal": "National Scholarship Portal (NSP) - scholarships.gov.in",
+      "application_deadline_note": "For 2026-27 cycle: last date 31 October 2026 (dates change annually - verify current cycle on NSP)",
+      "sdg_tags": [4, 5, 8],
+      "helpline": "Pragati Scholarship Helpline: 011-29581118; AICTE Help Desk: 011-26131497; NSP Help Desk: 0120-6619540",
+      "notes": "Covers engineering, polytechnic, pharmacy, architecture, applied arts, hotel management and other AICTE-approved programs."
+    },
+    {
+      "scholarship_id": "aicte_saksham_002",
+      "name": "AICTE Saksham Scholarship for Differently-Abled Students",
+      "run_by": "All India Council for Technical Education (AICTE)",
+      "eligibility": "Students with at least 40% disability (valid disability certificate required), admitted to 1st year (or 2nd year via lateral entry) of a technical degree/diploma course in an AICTE-approved institution; family income up to ₹8,00,000/year",
+      "amount_per_year_inr": 50000,
+      "number_of_scholarships_per_year": 5000,
+      "disbursement": "Direct Benefit Transfer (DBT) to bank account",
+      "application_portal": "National Scholarship Portal (NSP) - scholarships.gov.in",
+      "application_deadline_note": "For 2026-27 cycle: last date 31 October 2026 (verify current cycle on NSP)",
+      "sdg_tags": [4, 10, 8],
+      "notes": "Same amount/structure as Pragati but targeted at students with disabilities rather than girl students specifically."
+    },
+    {
+      "scholarship_id": "aicte_swanath_003",
+      "name": "AICTE Swanath Scholarship",
+      "run_by": "All India Council for Technical Education (AICTE)",
+      "eligibility": "Orphans, COVID-affected families, wards of Armed Forces/CAPF martyrs, and other notified eligible categories, pursuing AICTE-approved technical degree/diploma programs",
+      "amount_per_year_inr": 50000,
+      "disbursement": "Direct Benefit Transfer (DBT) to bank account",
+      "application_portal": "National Scholarship Portal (NSP) - scholarships.gov.in",
+      "sdg_tags": [4, 1, 8],
+      "notes": "Third flagship AICTE scheme alongside Pragati and Saksham; verify current eligible-category list on NSP as it can be updated."
+    },
+    {
+      "scholarship_id": "post_matric_scholarship_004",
+      "name": "Post Matric Scholarship (PMS) for SC/ST/OBC/EWS students",
+      "run_by": "Ministry of Social Justice & Empowerment / Ministry of Tribal Affairs / State Governments (category-dependent)",
+      "eligibility": "Students from SC/ST/OBC/EWS categories pursuing studies after Class 10, including polytechnic/ITI/diploma students; income ceilings vary by category and state",
+      "coverage": "Covers tuition fees, maintenance allowance; amount varies by state and category",
+      "application_portal": "National Scholarship Portal (NSP) - scholarships.gov.in",
+      "sdg_tags": [4, 10, 1],
+      "notes": "One of the most widely used vocational/diploma scholarship schemes in India; a single NSP application can route to the applicable category-specific scheme."
+    },
+    {
+      "scholarship_id": "state_merit_cum_means_005",
+      "name": "State Merit-cum-Means Scholarships for Diploma/ITI Students",
+      "run_by": "Respective State Governments (scheme name and amount vary by state)",
+      "eligibility": "Diploma/ITI students meeting state-specific merit and family-income criteria",
+      "coverage": "Varies by state - typically partial fee waiver or fixed annual stipend",
+      "application_portal": "State scholarship portal or National Scholarship Portal (varies by state)",
+      "sdg_tags": [4, 1],
+      "notes": "Since these are state-specific, exact scheme name/amount should be looked up for the specific state a village profile belongs to (e.g., Maharashtra, Gujarat, Haryana each run their own variant)."
+    }
+  ],
+  "data_confidence": "Vocational course structures (ITI/Polytechnic/PMKVY/B.Voc/DDU-GKY/RSETI/SWAYAM/PM Vishwakarma) and scholarship details (Pragati, Saksham, Swanath, PMS) cross-verified from AICTE, MSDE, MoRD, and NSP portals as of mid-2026. Time-sensitive stipend rates and state scholarship amounts should be re-verified on official portals prior to final submission.",
+  "last_updated": "2026-07-29"
+}

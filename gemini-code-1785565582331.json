@@ -1,0 +1,94 @@
+{
+  "evaluation_request": {
+    "student_id": "STU_2026_9941",
+    "timestamp": "2026-08-01T11:50:50Z",
+    "exam_target": {
+      "exam_code": "IPMAT_2027",
+      "days_remaining": 60,
+      "daily_cognitive_token_budget": 180
+    },
+    "phase_1_synthetic_results": {
+      "raw_global_alpha": 0.42,
+      "raw_global_lambda": 0.038
+    },
+    "phase_2_class_observations": [
+      {
+        "class_id": "COG_01",
+        "attempts": 3,
+        "correct": 2,
+        "avg_time_sec": 18.4,
+        "calibrated_W": 0.90,
+        "calibrated_D": 1.08
+      },
+      {
+        "class_id": "COG_04",
+        "attempts": 4,
+        "correct": 4,
+        "avg_time_sec": 12.1,
+        "calibrated_W": 1.20,
+        "calibrated_D": 0.65
+      },
+      {
+        "class_id": "COG_12",
+        "attempts": 2,
+        "correct": 1,
+        "avg_time_sec": 24.5,
+        "calibrated_W": 0.75,
+        "calibrated_D": 1.20
+      }
+    ]
+  },
+  
+  "evaluation_response": {
+    "computed_at": "2026-08-01T11:50:51Z",
+    "overall_feasibility_index": 0.814,
+    "overall_confidence": 0.885,
+    "curve_evaluations": [
+      {
+        "class_id": "COG_01",
+        "class_name": "Conceptual Mathematics",
+        "calibrated_alpha": 0.378,
+        "calibrated_lambda": 0.041,
+        "current_stability_S_days": 22.6,
+        "projected_metrics": {
+          "mastery_at_20_tokens": 0.68,
+          "mastery_at_40_tokens": 0.82,
+          "retention_at_day_60": 0.785,
+          "bayesian_95_credible_interval": [0.721, 0.849],
+          "epistemic_confidence": 0.870
+        },
+        "recommended_first_review_day": 14
+      },
+      {
+        "class_id": "COG_04",
+        "class_name": "Reading Comprehension",
+        "calibrated_alpha": 0.504,
+        "calibrated_lambda": 0.025,
+        "current_stability_S_days": 40.4,
+        "projected_metrics": {
+          "mastery_at_20_tokens": 0.85,
+          "mastery_at_40_tokens": 0.94,
+          "retention_at_day_60": 0.918,
+          "bayesian_95_credible_interval": [0.882, 0.954],
+          "epistemic_confidence": 0.940
+        },
+        "recommended_first_review_day": 28
+      },
+      {
+        "class_id": "COG_12",
+        "class_name": "Spatial & Non-Verbal Reasoning",
+        "calibrated_alpha": 0.315,
+        "calibrated_lambda": 0.046,
+        "current_stability_S_days": 16.2,
+        "projected_metrics": {
+          "mastery_at_20_tokens": 0.55,
+          "mastery_at_40_tokens": 0.71,
+          "retention_at_day_60": 0.690,
+          "bayesian_95_credible_interval": [0.610, 0.770],
+          "epistemic_confidence": 0.720
+        },
+        "recommended_first_review_day": 9
+      }
+    ]
+  }
+}

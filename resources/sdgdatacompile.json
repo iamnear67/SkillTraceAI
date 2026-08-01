@@ -1,0 +1,794 @@
+{
+  "database": {
+    "name": "sdgHackathon",
+    "version": "1.0",
+    "description": "Unified relational schema for all 17 UN Sustainable Development Goals (SDGs). Designed for MySQL using camelCase naming conventions with interconnected datasets."
+  },
+  "sharedTables": [
+    {
+      "tableName": "country",
+      "primaryKey": "countryId",
+      "description": "Master table containing countries.",
+      "fields": [
+        {
+          "name": "countryId",
+          "type": "INT AUTO_INCREMENT",
+          "nullable": false,
+          "description": "Primary key."
+        },
+        {
+          "name": "isoCode",
+          "type": "CHAR(3)",
+          "nullable": false,
+          "description": "ISO-3166 country code."
+        },
+        {
+          "name": "countryName",
+          "type": "VARCHAR(120)",
+          "nullable": false,
+          "description": "Official country name."
+        },
+        {
+          "name": "region",
+          "type": "VARCHAR(80)",
+          "nullable": false,
+          "description": "Geographical region."
+        },
+        {
+          "name": "incomeGroup",
+          "type": "VARCHAR(50)",
+          "nullable": false,
+          "description": "World Bank income classification."
+        }
+      ]
+    },
+    {
+      "tableName": "location",
+      "primaryKey": "locationId",
+      "foreignKeys": [
+        {
+          "field": "countryId",
+          "references": "country.countryId"
+        }
+      ],
+      "description": "Administrative location hierarchy.",
+      "fields": [
+        {
+          "name": "locationId",
+          "type": "INT AUTO_INCREMENT",
+          "nullable": false,
+          "description": "Primary key."
+        },
+        {
+          "name": "countryId",
+          "type": "INT",
+          "nullable": false,
+          "description": "Country reference."
+        },
+        {
+          "name": "stateName",
+          "type": "VARCHAR(120)",
+          "nullable": false,
+          "description": "State or province."
+        },
+        {
+          "name": "districtName",
+          "type": "VARCHAR(120)",
+          "nullable": true,
+          "description": "District or county."
+        },
+        {
+          "name": "cityName",
+          "type": "VARCHAR(120)",
+          "nullable": true,
+          "description": "City or municipality."
+        },
+        {
+          "name": "latitude",
+          "type": "DECIMAL(10,7)",
+          "nullable": true,
+          "description": "Latitude."
+        },
+        {
+          "name": "longitude",
+          "type": "DECIMAL(10,7)",
+          "nullable": true,
+          "description": "Longitude."
+        }
+      ]
+    },
+    {
+      "tableName": "yearDimension",
+      "primaryKey": "yearId",
+      "description": "Reporting year dimension.",
+      "fields": [
+        {
+          "name": "yearId",
+          "type": "INT AUTO_INCREMENT",
+          "nullable": false,
+          "description": "Primary key."
+        },
+        {
+          "name": "reportYear",
+          "type": "YEAR",
+          "nullable": false,
+          "description": "Reporting year."
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "sdg": 1,
+      "title": "Poverty",
+      "tableName": "povertyRecord",
+      "primaryKey": "povertyId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "povertyId",
+          "type": "INT AUTO_INCREMENT",
+          "description": "Primary key."
+        },
+        {
+          "name": "locationId",
+          "type": "INT",
+          "description": "Location reference."
+        },
+        {
+          "name": "yearId",
+          "type": "INT",
+          "description": "Year reference."
+        },
+        {
+          "name": "povertyRate",
+          "type": "DECIMAL(5,2)",
+          "description": "Population below poverty line."
+        },
+        {
+          "name": "householdsSupported",
+          "type": "INT",
+          "description": "Households receiving aid."
+        }
+      ]
+    },
+    {
+      "sdg": 2,
+      "title": "Hunger",
+      "tableName": "foodSecurity",
+      "primaryKey": "foodSecurityId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "foodSecurityId",
+          "type": "INT AUTO_INCREMENT",
+          "description": "Primary key."
+        },
+        {
+          "name": "locationId",
+          "type": "INT",
+          "description": "Location reference."
+        },
+        {
+          "name": "yearId",
+          "type": "INT",
+          "description": "Year reference."
+        },
+        {
+          "name": "malnutritionRate",
+          "type": "DECIMAL(5,2)",
+          "description": "Malnutrition percentage."
+        },
+        {
+          "name": "cropYield",
+          "type": "DECIMAL(10,2)",
+          "description": "Crop yield in tonnes/hectare."
+        }
+      ]
+    },
+    {
+      "sdg": 3,
+      "title": "Health",
+      "tableName": "healthRecord",
+      "primaryKey": "healthId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "healthId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "lifeExpectancy",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "infantMortalityRate",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "vaccinationCoverage",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 4,
+      "title": "Education",
+      "tableName": "educationRecord",
+      "primaryKey": "educationId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "educationId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "literacyRate",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "schoolEnrollment",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "dropoutRate",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 5,
+      "title": "Gender Equality",
+      "tableName": "genderEquality",
+      "primaryKey": "genderId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "genderId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "femaleEmploymentRate",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "genderPayGap",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "womenInLeadership",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 6,
+      "title": "Water",
+      "tableName": "waterAccess",
+      "primaryKey": "waterId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "waterId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "safeWaterCoverage",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "sanitationCoverage",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 7,
+      "title": "Energy",
+      "tableName": "energyAccess",
+      "primaryKey": "energyId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "energyId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "renewablePercentage",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "electricityAccess",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 8,
+      "title": "Employment",
+      "tableName": "employmentRecord",
+      "primaryKey": "employmentId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "employmentId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "employmentRate",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "unemploymentRate",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "gdpGrowth",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 9,
+      "title": "Industry",
+      "tableName": "industryInnovation",
+      "primaryKey": "industryId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "industryId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "manufacturingOutput",
+          "type": "DECIMAL(12,2)"
+        },
+        {
+          "name": "researchInvestment",
+          "type": "DECIMAL(12,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 10,
+      "title": "Inequality",
+      "tableName": "inequalityRecord",
+      "primaryKey": "inequalityId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "inequalityId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "giniIndex",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "incomeRatio",
+          "type": "DECIMAL(6,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 11,
+      "title": "Smart Cities",
+      "tableName": "smartCity",
+      "primaryKey": "cityId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "cityId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "publicTransportCoverage",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "greenAreaPerCapita",
+          "type": "DECIMAL(10,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 12,
+      "title": "Responsible Consumption",
+      "tableName": "consumptionRecord",
+      "primaryKey": "consumptionId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "consumptionId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "recyclingRate",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "wasteGenerated",
+          "type": "DECIMAL(12,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 13,
+      "title": "Climate",
+      "tableName": "climateRecord",
+      "primaryKey": "climateId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "climateId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "co2Emission",
+          "type": "DECIMAL(12,2)"
+        },
+        {
+          "name": "averageTemperature",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 14,
+      "title": "Oceans",
+      "tableName": "oceanRecord",
+      "primaryKey": "oceanId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "oceanId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "marineProtectedArea",
+          "type": "DECIMAL(10,2)"
+        },
+        {
+          "name": "plasticWaste",
+          "type": "DECIMAL(12,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 15,
+      "title": "Forests",
+      "tableName": "forestRecord",
+      "primaryKey": "forestId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "forestId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "forestCoverage",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "treesPlanted",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "sdg": 16,
+      "title": "Governance",
+      "tableName": "governanceRecord",
+      "primaryKey": "governanceId",
+      "foreignKeys": [
+        {
+          "field": "locationId",
+          "references": "location.locationId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "governanceId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "locationId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "corruptionIndex",
+          "type": "DECIMAL(5,2)"
+        },
+        {
+          "name": "crimeRate",
+          "type": "DECIMAL(5,2)"
+        }
+      ]
+    },
+    {
+      "sdg": 17,
+      "title": "Partnerships",
+      "tableName": "partnershipRecord",
+      "primaryKey": "partnershipId",
+      "foreignKeys": [
+        {
+          "field": "countryId",
+          "references": "country.countryId"
+        },
+        {
+          "field": "yearId",
+          "references": "yearDimension.yearId"
+        }
+      ],
+      "fields": [
+        {
+          "name": "partnershipId",
+          "type": "INT AUTO_INCREMENT"
+        },
+        {
+          "name": "countryId",
+          "type": "INT"
+        },
+        {
+          "name": "yearId",
+          "type": "INT"
+        },
+        {
+          "name": "internationalProjects",
+          "type": "INT"
+        },
+        {
+          "name": "fundingReceived",
+          "type": "DECIMAL(15,2)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+💡 Human-Readable Summary of Your IdeaThe Antigravity Core Concept:Standard exam prep treats all students and all syllabus topics as equal. Your vision recognizes that time is bounded, memory decays, and learning capacity varies per student.Instead of forcing a student to exhaustively cover 100% of a massive syllabus (which leads to burnout and incomplete mastery), Antigravity acts as a Strategic Yield Maximizer:It breaks every topic down into its Pareto curve (e.g., spending 50% of the effort on a topic often yields 80% of its marks).It evaluates the student’s personal learning rate ($\eta$) and decay rate ($\lambda$) against the exam date.It mathematically computes an Optimal Coverage Strategy that dictates precisely:Deep Mastery: High-weightage topics with high yield-to-effort ratios.Partial / High-Yield Pruning: Topics where studying only core concepts gets 80% of the marks for 50% effort.Brief Glances / Formula-Only: Low-yield topics that take too long to master deeply.Strategic Skips: High-effort, low-weightage topics that would drain time needed to lock in guaranteed marks elsewhere.In short: Antigravity optimizes the total expected marks per unit of study effort, tailored specifically to the individual student's brain.📐 Mathematical Formulation: The Expected Score MaximizerTo determine which topics to master, prune, or skip, we formulate this as a Knapsack-Style Continuous Nonlinear Optimization Problem.1. The Topic Yield Function (Diminishing Returns)For a topic $i$, the proportion of mastery achieved by spending $t_i$ effective study tokens follows a saturation curve (e.g., 50% effort yields 80% mastery):$$M_i(t_i) = 1 - e^{-k_i \cdot \eta \cdot t_i}$$$t_i$: Number of study tokens allocated to topic $i$.$\eta$: Student's intrinsic learning rate.$k_i$: Topic tractability factor (how "easy" the topic is to digest).2. Time-Decay Retention FactorBecause the exam is $D$ days away, the retained mastery at exam day $D$ drops due to memory decay $\lambda$:$$R_i(t_i, D) = M_i(t_i) \cdot e^{-\lambda \cdot (D - d_i)}$$$d_i$: Day when topic $i$ is studied.$\lambda$: Student's decay coefficient.3. Expected Score Objective FunctionLet $W_i$ be the weightage (marks) of topic $i$ in the target exam. The total expected score $E(S)$ across $N$ topics is:$$\max_{\{t_i\}} E(S) = \sum_{i=1}^{N} W_i \cdot \left(1 - e^{-k_i \cdot \eta \cdot t_i}\right) \cdot e^{-\lambda \cdot (D - d_i)}$$4. ConstraintsTotal Available Time Budget ($T_{\text{max}}$):$$\sum_{i=1}^{N} t_i \le \text{Days Remaining} \times \text{Daily Token Capacity}$$Strategy Boundaries per Topic ($t_i$ selection):Full Mastery ($t_i = t_{\text{full}}$): $M_i \approx 0.95 \implies$ Expected Marks $\approx 0.95 W_i$Pareto High-Yield ($t_i = t_{\text{pareto}}$): $M_i \approx 0.80 \implies$ Expected Marks $\approx 0.80 W_i$ (uses only $\sim 50\%$ time)Formula Scan ($t_i = t_{\text{brief}}$): $M_i \approx 0.35 \implies$ Captures easy direct questions onlyComplete Skip ($t_i = 0$): $M_i = 0$📥 Antigravity Input Payload (JSON)This payload feeds the student profile, exam parameters, and topic-level yield curves into the optimization engine.JSON{
+  "student_profile": {
+    "student_id": "SYNTH_STU_8092",
+    "cognitive_metrics": {
+      "learning_rate_eta": 0.042,
+      "decay_lambda": 0.015,
+      "daily_token_capacity": 40
+    },
+    "preparation_constraints": {
+      "days_remaining": 120,
+      "total_available_tokens": 4800
+    }
+  },
+  "target_exam": {
+    "exam_code": "JEE_ADV_2027",
+    "target_score_cutoff": 180,
+    "max_possible_score": 360
+  },
+  "syllabus_topic_breakdown": [
+    {
+      "topic_id": "PHYS_ROTATIONAL_DYNAMICS",
+      "topic_name": "Rotational Motion & Rigid Bodies",
+      "weightage_marks": 18,
+      "tractability_k": 0.6,
+      "yield_curve_tiers": {
+        "full_mastery_tokens": 180,
+        "pareto_80_percent_tokens": 85,
+        "formula_only_tokens": 20
+      }
+    },
+    {
+      "topic_id": "PHYS_MODERN_PHYSICS",
+      "topic_name": "Modern Physics & Atomic Structure",
+      "weightage_marks": 24,
+      "tractability_k": 1.4,
+      "yield_curve_tiers": {
+        "full_mastery_tokens": 90,
+        "pareto_80_percent_tokens": 40,
+        "formula_only_tokens": 10
+      }
+    },
+    {
+      "topic_id": "MATH_PERMUTATIONS_COMBINATIONS",
+      "topic_name": "Permutations, Combinations & Probability",
+      "weightage_marks": 16,
+      "tractability_k": 0.5,
+      "yield_curve_tiers": {
+        "full_mastery_tokens": 160,
+        "pareto_80_percent_tokens": 70,
+        "formula_only_tokens": 15
+      }
+    },
+    {
+      "topic_id": "CHEM_CHEMICAL_BONDING",
+      "topic_name": "Chemical Bonding & Molecular Structure",
+      "weightage_marks": 20,
+      "tractability_k": 1.2,
+      "yield_curve_tiers": {
+        "full_mastery_tokens": 80,
+        "pareto_80_percent_tokens": 35,
+        "formula_only_tokens": 8
+      }
+    }
+  ]
+}
+📤 Antigravity Strategy Engine Output (JSON)After running the optimizer, Antigravity generates this actionable roadmap for the student:JSON{
+  "optimization_summary": {
+    "student_id": "SYNTH_STU_8092",
+    "target_exam": "JEE_ADV_2027",
+    "allocated_tokens": 4760,
+    "projected_score": 212,
+    "target_cutoff": 180,
+    "feasibility_status": "HIGHLY_FEASIBLE"
+  },
+  "topic_allocations": [
+    {
+      "topic_id": "PHYS_MODERN_PHYSICS",
+      "recommendation": "FULL_MASTERY",
+      "assigned_tokens": 90,
+      "expected_yield_marks": 22.8,
+      "reasoning": "High weightage (24) and high tractability (1.4). Top return on invested time."
+    },
+    {
+      "topic_id": "PHYS_ROTATIONAL_DYNAMICS",
+      "recommendation": "PARETO_PRUNED_80",
+      "assigned_tokens": 85,
+      "expected_yield_marks": 14.4,
+      "reasoning": "High difficulty. Spending 85 tokens secures ~80% of marks. Saving 95 tokens for easier topics."
+    },
+    {
+      "topic_id": "MATH_PERMUTATIONS_COMBINATIONS",
+      "recommendation": "FORMULA_AND_DIRECT_ONLY",
+      "assigned_tokens": 15,
+      "expected_yield_marks": 5.6,
+      "reasoning": "Low student tractability. Full mastery requires too many tokens; cap at direct question solving."
+    }
+  ]
+}

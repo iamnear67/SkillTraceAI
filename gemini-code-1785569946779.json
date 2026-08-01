@@ -1,0 +1,463 @@
+{
+  "dataset_info": {
+    "title": "Comprehensive Competitive Exam Analysis & Cutoff Predictions",
+    "cutoff_methodology": "3-Year moving average adjusted for trend trajectory (rising applicant volumes, normalization, and difficulty level shift)",
+    "total_exams_covered_sample": 10
+  },
+  "exams": [
+    {
+      "id": "upsc_cse_prelims",
+      "exam_name": "UPSC Civil Services Examination (Prelims - GS Paper 1)",
+      "category": "Civil Services & Administration",
+      "total_marks": 200,
+      "predicted_cutoff_2026": "78.50 - 82.00 / 200 (General)",
+      "cutoff_trend_analysis": "Rising slightly after a multi-year dip due to predictable question distribution in polity and economy.",
+      "subtopics": [
+        {
+          "subject": "Indian Polity & Governance",
+          "name": "Constitutional Amendments, Fundamental Rights, & Judiciary",
+          "complexity": "High",
+          "weightage_percent": 18
+        },
+        {
+          "subject": "Economy",
+          "name": "Monetary Policy, Banking, Inflation & Union Budget",
+          "complexity": "High",
+          "weightage_percent": 16
+        },
+        {
+          "subject": "Environment & Ecology",
+          "name": "Biodiversity, Protected Areas, & Climate Treaties",
+          "complexity": "Medium-High",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "Modern History",
+          "name": "Freedom Movement (1857-1947) & Acts",
+          "complexity": "Medium",
+          "weightage_percent": 12
+        },
+        {
+          "subject": "Geography",
+          "name": "Physical Geography, Indian River Systems, & Mapping",
+          "complexity": "Medium-High",
+          "weightage_percent": 12
+        },
+        {
+          "subject": "Science & Technology",
+          "name": "Emerging Tech, Biotechnology, Space & AI",
+          "complexity": "High",
+          "weightage_percent": 14
+        },
+        {
+          "subject": "Current Affairs",
+          "name": "International Relations, Schemes & Reports",
+          "complexity": "Medium",
+          "weightage_percent": 13
+        }
+      ]
+    },
+    {
+      "id": "jee_advanced",
+      "exam_name": "JEE Advanced (Joint Entrance Examination)",
+      "category": "Engineering Entrance",
+      "total_marks": 360,
+      "predicted_cutoff_2026": "108 - 115 / 360 (Aggregate General Qualification)",
+      "cutoff_trend_analysis": "Stable to slightly rising due to deeper conceptual familiarity and increased quality of online prep.",
+      "subtopics": [
+        {
+          "subject": "Physics",
+          "name": "Rotational Dynamics & Rigid Body Mechanics",
+          "complexity": "Very High",
+          "weightage_percent": 12
+        },
+        {
+          "subject": "Physics",
+          "name": "Electromagnetism & Induction",
+          "complexity": "High",
+          "weightage_percent": 14
+        },
+        {
+          "subject": "Mathematics",
+          "name": "Definite Integration & Calculus",
+          "complexity": "Very High",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "Mathematics",
+          "name": "Vectors & 3D Geometry",
+          "complexity": "Medium-High",
+          "weightage_percent": 11
+        },
+        {
+          "subject": "Chemistry",
+          "name": "Organic Reaction Mechanisms",
+          "complexity": "High",
+          "weightage_percent": 14
+        },
+        {
+          "subject": "Chemistry",
+          "name": "Thermodynamics & Chemical Equilibrium",
+          "complexity": "High",
+          "weightage_percent": 12
+        },
+        {
+          "subject": "Chemistry",
+          "name": "Coordination Compounds",
+          "complexity": "Medium",
+          "weightage_percent": 10
+        }
+      ]
+    },
+    {
+      "id": "neet_ug",
+      "exam_name": "NEET UG (National Eligibility cum Entrance Test)",
+      "category": "Medical Entrance",
+      "total_marks": 720,
+      "predicted_cutoff_2026": "655 - 662 / 720 (General - All India Quota MBBS)",
+      "cutoff_trend_analysis": "Rising steadily due to high candidate volumes (~24L+) and increased scoring density at the top.",
+      "subtopics": [
+        {
+          "subject": "Biology",
+          "name": "Human Physiology & Systems",
+          "complexity": "Medium",
+          "weightage_percent": 20
+        },
+        {
+          "subject": "Biology",
+          "name": "Genetics & Molecular Basis of Inheritance",
+          "complexity": "High",
+          "weightage_percent": 18
+        },
+        {
+          "subject": "Biology",
+          "name": "Ecology & Environment",
+          "complexity": "Easy-Medium",
+          "weightage_percent": 12
+        },
+        {
+          "subject": "Chemistry",
+          "name": "Organic Reactions & Named Reactions",
+          "complexity": "Medium-High",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "Chemistry",
+          "name": "Physical Chemistry (NCERT Numerical Base)",
+          "complexity": "Medium",
+          "weightage_percent": 10
+        },
+        {
+          "subject": "Physics",
+          "name": "Mechanics & Laws of Motion",
+          "complexity": "High",
+          "weightage_percent": 13
+        },
+        {
+          "subject": "Physics",
+          "name": "Current Electricity & Magnetism",
+          "complexity": "Medium-High",
+          "weightage_percent": 12
+        }
+      ]
+    },
+    {
+      "id": "cat_mba",
+      "exam_name": "CAT (Common Admission Test - IIMs)",
+      "category": "Management Entrance",
+      "total_marks": 198,
+      "predicted_cutoff_2026": "99.0 Percentile (~76-82 raw marks)",
+      "cutoff_trend_analysis": "Fluctuating raw marks depending on section difficulty, but percentile cutoffs remain strictly stable.",
+      "subtopics": [
+        {
+          "subject": "VARC",
+          "name": "Reading Comprehension (Inference & Tone)",
+          "complexity": "High",
+          "weightage_percent": 24
+        },
+        {
+          "subject": "VARC",
+          "name": "Para Summary & Sentence Rearrangement",
+          "complexity": "Medium",
+          "weightage_percent": 10
+        },
+        {
+          "subject": "DILR",
+          "name": "Arrangements & Matrix Tables",
+          "complexity": "Very High",
+          "weightage_percent": 18
+        },
+        {
+          "subject": "DILR",
+          "name": "Graph/Chart Data Interpretation & Venn Diagrams",
+          "complexity": "High",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "QA",
+          "name": "Arithmetic (Profit/Loss, TSD, Work, Averages)",
+          "complexity": "Medium-High",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "QA",
+          "name": "Algebra (Equations, Functions, Logarithms)",
+          "complexity": "High",
+          "weightage_percent": 12
+        },
+        {
+          "subject": "QA",
+          "name": "Geometry & Mensuration",
+          "complexity": "Medium",
+          "weightage_percent": 6
+        }
+      ]
+    },
+    {
+      "id": "gate_cse",
+      "exam_name": "GATE (Graduate Aptitude Test in Engineering - CSE)",
+      "category": "Technical & Higher Education",
+      "total_marks": 100,
+      "predicted_cutoff_2026": "27.5 - 29.0 / 100 (Qualifying General)",
+      "cutoff_trend_analysis": "Stable; qualifying mark remains around 25-30%, but top PSU recruitment cutoffs require 72+ marks.",
+      "subtopics": [
+        {
+          "subject": "Core Computer Science",
+          "name": "Data Structures & Algorithms",
+          "complexity": "High",
+          "weightage_percent": 18
+        },
+        {
+          "subject": "Core Computer Science",
+          "name": "Operating Systems & System Architecture",
+          "complexity": "Medium-High",
+          "weightage_percent": 11
+        },
+        {
+          "subject": "Core Computer Science",
+          "name": "Computer Networks",
+          "complexity": "High",
+          "weightage_percent": 10
+        },
+        {
+          "subject": "Core Computer Science",
+          "name": "Database Management Systems (SQL & Normalization)",
+          "complexity": "Medium",
+          "weightage_percent": 9
+        },
+        {
+          "subject": "Theory of Computation",
+          "name": "Automata & Compiler Design",
+          "complexity": "High",
+          "weightage_percent": 12
+        },
+        {
+          "subject": "Mathematics",
+          "name": "Discrete Mathematics & Probability",
+          "complexity": "High",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "General Aptitude",
+          "name": "Verbal & Numerical Ability",
+          "complexity": "Easy-Medium",
+          "weightage_percent": 15
+        }
+      ]
+    },
+    {
+      "id": "ssc_cgl_tier1",
+      "exam_name": "SSC CGL (Combined Graduate Level - Tier I)",
+      "category": "Government Recruitment",
+      "total_marks": 200,
+      "predicted_cutoff_2026": "142 - 148 / 200 (UR Category)",
+      "cutoff_trend_analysis": "Rising trajectory driven by normalized scoring mechanics and increased candidate preparation tools.",
+      "subtopics": [
+        {
+          "subject": "Quantitative Aptitude",
+          "name": "Arithmetic (Percentage, Profit & Loss, SI/CI)",
+          "complexity": "Medium",
+          "weightage_percent": 14
+        },
+        {
+          "subject": "Quantitative Aptitude",
+          "name": "Advanced Math (Algebra, Trigonometry, Geometry)",
+          "complexity": "Medium-High",
+          "weightage_percent": 11
+        },
+        {
+          "subject": "General Intelligence",
+          "name": "Coding-Decoding, Analogy & Syllogism",
+          "complexity": "Easy-Medium",
+          "weightage_percent": 25
+        },
+        {
+          "subject": "English Comprehension",
+          "name": "Grammar Error Spotting, Cloze Test & Vocab",
+          "complexity": "Medium",
+          "weightage_percent": 25
+        },
+        {
+          "subject": "General Awareness",
+          "name": "Static GK (Polity, History, Science) & Current Affairs",
+          "complexity": "Medium-High",
+          "weightage_percent": 25
+        }
+      ]
+    },
+    {
+      "id": "sbi_po_prelims",
+      "exam_name": "SBI PO (State Bank of India Probationary Officer - Prelims)",
+      "category": "Banking & Financial Services",
+      "total_marks": 100,
+      "predicted_cutoff_2026": "58.5 - 61.0 / 100 (General)",
+      "cutoff_trend_analysis": "Fluctuating within a tight band (56-63) due to difficulty balancing across slots.",
+      "subtopics": [
+        {
+          "subject": "Quantitative Aptitude",
+          "name": "Data Interpretation (Pie Chart, Caselet, Bar)",
+          "complexity": "High",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "Quantitative Aptitude",
+          "name": "Simplification, Quadratic Equations & Series",
+          "complexity": "Medium",
+          "weightage_percent": 20
+        },
+        {
+          "subject": "Reasoning Ability",
+          "name": "Puzzles & Seating Arrangements (Multi-variable)",
+          "complexity": "Very High",
+          "weightage_percent": 20
+        },
+        {
+          "subject": "Reasoning Ability",
+          "name": "Syllogisms, Inequality & Blood Relations",
+          "complexity": "Easy-Medium",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "English Language",
+          "name": "Reading Comprehension & Para Jumbles",
+          "complexity": "Medium-High",
+          "weightage_percent": 30
+        }
+      ]
+    },
+    {
+      "id": "clat_ug",
+      "exam_name": "CLAT UG (Common Law Admission Test)",
+      "category": "Law Entrance",
+      "total_marks": 120,
+      "predicted_cutoff_2026": "88.0 - 92.5 / 120 (Top 3 NLUs General)",
+      "cutoff_trend_analysis": "Rising due to lower total mark structure (120 marks) and reading-passage intensive format.",
+      "subtopics": [
+        {
+          "subject": "Legal Reasoning",
+          "name": "Constitutional Law, Torts, Contracts & Criminal Law",
+          "complexity": "High",
+          "weightage_percent": 25
+        },
+        {
+          "subject": "Current Affairs & GK",
+          "name": "National/International Events & Legal Current Affairs",
+          "complexity": "Medium",
+          "weightage_percent": 25
+        },
+        {
+          "subject": "Logical Reasoning",
+          "name": "Critical Reasoning (Arguments, Assumptions, Inferences)",
+          "complexity": "High",
+          "weightage_percent": 20
+        },
+        {
+          "subject": "English Language",
+          "name": "Passage Comprehension, Vocabulary & Inference",
+          "complexity": "Medium-High",
+          "weightage_percent": 20
+        },
+        {
+          "subject": "Quantitative Techniques",
+          "name": "Passage-based Data Interpretation (Class 10 level)",
+          "complexity": "Medium",
+          "weightage_percent": 10
+        }
+      ]
+    },
+    {
+      "id": "nda_written",
+      "exam_name": "NDA Written Exam (National Defence Academy)",
+      "category": "Defence Services",
+      "total_marks": 900,
+      "predicted_cutoff_2026": "355 - 365 / 900 (Plus 25% sectional cutoff per subject)",
+      "cutoff_trend_analysis": "Stable; cutoffs fluctuate marginally between 340-360 out of 900.",
+      "subtopics": [
+        {
+          "subject": "Mathematics",
+          "name": "Trigonometry & Algebra",
+          "complexity": "Medium",
+          "weightage_percent": 15
+        },
+        {
+          "subject": "Mathematics",
+          "name": "Calculus, Matrices & Determinants",
+          "complexity": "Medium-High",
+          "weightage_percent": 18
+        },
+        {
+          "subject": "General Ability Test (GAT)",
+          "name": "English Grammar & Comprehension",
+          "complexity": "Medium",
+          "weightage_percent": 22
+        },
+        {
+          "subject": "General Ability Test (GAT)",
+          "name": "Physics & Chemistry Basics",
+          "complexity": "Easy-Medium",
+          "weightage_percent": 20
+        },
+        {
+          "subject": "General Ability Test (GAT)",
+          "name": "Indian History, Geography & Current Events",
+          "complexity": "Medium",
+          "weightage_percent": 25
+        }
+      ]
+    },
+    {
+      "id": "ca_foundation",
+      "exam_name": "CA Foundation (ICAI)",
+      "category": "Commerce & Professional Certification",
+      "total_marks": 400,
+      "predicted_cutoff_2026": "200 / 400 Aggregate (Min 40% per paper)",
+      "cutoff_trend_analysis": "Fixed passing criteria (50% aggregate), pass percentage fluctuates between 20-25%.",
+      "subtopics": [
+        {
+          "subject": "Accounting",
+          "name": "Financial Statements, Special Transactions & Partnership",
+          "complexity": "High",
+          "weightage_percent": 25
+        },
+        {
+          "subject": "Business Laws",
+          "name": "Indian Contract Act, Sale of Goods Act, Companies Act",
+          "complexity": "High",
+          "weightage_percent": 25
+        },
+        {
+          "subject": "Quantitative Aptitude",
+          "name": "Business Mathematics, Logical Reasoning & Statistics",
+          "complexity": "Medium-High",
+          "weightage_percent": 25
+        },
+        {
+          "subject": "Business Economics",
+          "name": "Micro & Macro Economics, Market Structure",
+          "complexity": "Medium",
+          "weightage_percent": 25
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1559 @@
+{
+  "metadata": {
+    "title": "Mapping of Top 100 Competitive Exams to Colleges",
+    "description": "Comprehensive mapping of major national, state, professional, and international competitive exams to target colleges, acceptance tiers, and expected score/rank ranges.",
+    "total_exams_mapped": 100
+  },
+  "exams": [
+    {
+      "exam_id": 1,
+      "exam_name": "JEE Main",
+      "category": "Engineering (UG)",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Rank/Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Tier 1 (Top NITs/IIITs)",
+          "score_rank_expectation": "AIR 1 - 12,000 (~99.0+ Percentile)",
+          "target_colleges": ["NIT Trichy", "NIT Surathkal", "NIT Warangal", "IIIT Allahabad", "MNNIT Allahabad"]
+        },
+        {
+          "tier": "Tier 1.5 (Mid NITs/IIITs/GFTIs)",
+          "score_rank_expectation": "AIR 12,001 - 35,000 (~97.0 - 98.9 Percentile)",
+          "target_colleges": ["VNIT Nagpur", "MNIT Jaipur", "IIIT Gwalior", "PEC Chandigarh", "BIT Mesra"]
+        },
+        {
+          "tier": "Tier 2 (Newer NITs/IIITs & Top State/Private)",
+          "score_rank_expectation": "AIR 35,001 - 85,000 (~93.0 - 96.9 Percentile)",
+          "target_colleges": ["NIT Meghalaya", "IIIT Una", "LNMIIT Jaipur", "Thapar University (JEE Quota)", "State Govt Colleges"]
+        }
+      ]
+    },
+    {
+      "exam_id": 2,
+      "exam_name": "JEE Advanced",
+      "category": "Engineering (UG)",
+      "conducting_body": "IITs (Rotational)",
+      "selection_model": "Binary Rank Allocation",
+      "college_mapping": [
+        {
+          "tier": "Top Old IITs (Core CS/ECE)",
+          "score_rank_expectation": "AIR 1 - 1,500",
+          "target_colleges": ["IIT Bombay", "IIT Delhi", "IIT Madras", "IIT Kanpur", "IIT Kharagpur"]
+        },
+        {
+          "tier": "Old IITs (Other Branches) & Top 2nd Gen IITs",
+          "score_rank_expectation": "AIR 1,501 - 6,000",
+          "target_colleges": ["IIT Roorkee", "IIT Guwahati", "IIT BHU", "IIT Hyderabad", "IIT Indore"]
+        },
+        {
+          "tier": "3rd Gen IITs & Lower Branches in 2nd Gen",
+          "score_rank_expectation": "AIR 6,001 - 17,500",
+          "target_colleges": ["IIT Tirupati", "IIT Palakkad", "IIT Dharwad", "IIT Bhilai", "IIT Jammu"]
+        }
+      ]
+    },
+    {
+      "exam_id": 3,
+      "exam_name": "BITSAT",
+      "category": "Engineering (UG)",
+      "conducting_body": "BITS Pilani",
+      "selection_model": "Score Threshold Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Flagship Campus (CS/ECE)",
+          "score_rank_expectation": "320+ / 390 marks",
+          "target_colleges": ["BITS Pilani (Pilani Campus)"]
+        },
+        {
+          "tier": "Goa & Hyderabad Campuses (CS/ECE)",
+          "score_rank_expectation": "285 - 319 marks",
+          "target_colleges": ["BITS Pilani (Goa Campus)", "BITS Pilani (Hyderabad Campus)"]
+        },
+        {
+          "tier": "Core & Dual Degree Branches (All Campuses)",
+          "score_rank_expectation": "210 - 284 marks",
+          "target_colleges": ["BITS Pilani", "BITS Goa", "BITS Hyderabad"]
+        }
+      ]
+    },
+    {
+      "exam_id": 4,
+      "exam_name": "NEET UG",
+      "category": "Medical (UG)",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Rank/Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Premier Medical Institutes",
+          "score_rank_expectation": "AIR 1 - 1,000 (690+ / 720 marks)",
+          "target_colleges": ["AIIMS New Delhi", "JIPMER Puducherry", "MAMC New Delhi", "VMMC New Delhi"]
+        },
+        {
+          "tier": "Top State Govt Medical Colleges (AIQ)",
+          "score_rank_expectation": "AIR 1,001 - 22,000 (655+ / 720 marks)",
+          "target_colleges": ["KGMU Lucknow", "BMC Bangalore", "Grant Medical College Mumbai", "SMS Jaipur"]
+        },
+        {
+          "tier": "Deemed / Top Private Medical Colleges",
+          "score_rank_expectation": "AIR 22,001 - 1,500,000 (Passing to 600 marks)",
+          "target_colleges": ["KMC Manipal", "Hamdard Institute", "SRM Medical College", "DY Patil Pune"]
+        }
+      ]
+    },
+    {
+      "exam_id": 5,
+      "exam_name": "CAT",
+      "category": "Management (PG)",
+      "conducting_body": "IIMs (Rotational)",
+      "selection_model": "Rank/Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "BLACKI IIMs & Top Non-IIMs",
+          "score_rank_expectation": "99.0+ Percentile",
+          "target_colleges": ["IIM Ahmedabad", "IIM Bangalore", "IIM Calcutta", "IIM Lucknow", "FMS Delhi", "SPJIMR"]
+        },
+        {
+          "tier": "New IIMs & Premier B-Schools",
+          "score_rank_expectation": "94.0 - 98.9 Percentile",
+          "target_colleges": ["IIM Kozhikode", "IIM Indore", "IIM Shillong", "MDI Gurgaon", "IIT Bombay (SJMSOM)", "SJMSoM"]
+        },
+        {
+          "tier": "Baby IIMs & Tier 2 B-Schools",
+          "score_rank_expectation": "80.0 - 93.9 Percentile",
+          "target_colleges": ["IIM Udaipur", "IIM Trichy", "IIM Ranchi", "IMT Ghaziabad", "TAPMI", "FORE"]
+        }
+      ]
+    },
+    {
+      "exam_id": 6,
+      "exam_name": "XAT",
+      "category": "Management (PG)",
+      "conducting_body": "XLRI Jamshedpur",
+      "selection_model": "Rank/Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Flagship Campus",
+          "score_rank_expectation": "96.0+ Percentile (BM), 93.0+ (HRM)",
+          "target_colleges": ["XLRI Jamshedpur", "XLRI Delhi-NCR"]
+        },
+        {
+          "tier": "Top Associate B-Schools",
+          "score_rank_expectation": "85.0 - 95.0 Percentile",
+          "target_colleges": ["XIMB Bhubaneswar", "IMT Ghaziabad", "IRMA Anand", "GIM Goa"]
+        }
+      ]
+    },
+    {
+      "exam_id": 7,
+      "exam_name": "CLAT UG",
+      "category": "Law (UG)",
+      "conducting_body": "Consortium of NLUs",
+      "selection_model": "Rank/Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Tier NLUs (Tier 1)",
+          "score_rank_expectation": "AIR 1 - 300",
+          "target_colleges": ["NLSIU Bengaluru", "NALSAR Hyderabad", "WBNUJS Kolkata"]
+        },
+        {
+          "tier": "Mid Tier NLUs (Tier 2)",
+          "score_rank_expectation": "AIR 301 - 1,500",
+          "target_colleges": ["NLU Jodhpur", "GNLU Gandhinagar", "NLIU Bhopal", "RMLNLU Lucknow"]
+        },
+        {
+          "tier": "Newer NLUs & Affiliated Private Schools",
+          "score_rank_expectation": "AIR 1,501 - 4,000",
+          "target_colleges": ["NLU Odisha", "NUSRL Ranchi", "NMIMS School of Law", "UPES Dehradun"]
+        }
+      ]
+    },
+    {
+      "exam_id": 8,
+      "exam_name": "AILET",
+      "category": "Law (UG)",
+      "conducting_body": "NLU Delhi",
+      "selection_model": "Binary Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Exclusive Single Institute",
+          "score_rank_expectation": "AIR 1 - 110 (General Category)",
+          "target_colleges": ["National Law University, Delhi (NLU Delhi)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 9,
+      "exam_name": "GATE (CSE)",
+      "category": "Engineering / Tech (PG)",
+      "conducting_body": "IISc / IITs",
+      "selection_model": "Rank / Score Range",
+      "college_mapping": [
+        {
+          "tier": "PSU Recruitment & Top Research",
+          "score_rank_expectation": "AIR 1 - 300 (Score 800+ / 1000)",
+          "target_colleges": ["IOCL", "ONGC", "NTPC", "IISc Bangalore (M.Tech/Ph.D)", "IIT Bombay"]
+        },
+        {
+          "tier": "Old IITs M.Tech",
+          "score_rank_expectation": "AIR 301 - 1,200",
+          "target_colleges": ["IIT Delhi", "IIT Madras", "IIT Kanpur", "IIT Kharagpur"]
+        },
+        {
+          "tier": "Newer IITs & Top NITs",
+          "score_rank_expectation": "AIR 1,201 - 3,500",
+          "target_colleges": ["IIT Hyderabad", "NIT Trichy", "NIT Surathkal", "IIIT Hyderabad (GATE Mode)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 10,
+      "exam_name": "UPSC CSE",
+      "category": "Civil Services & Public Admin",
+      "conducting_body": "Union Public Service Commission",
+      "selection_model": "Rank/Service Allocation",
+      "college_mapping": [
+        {
+          "tier": "National Civil Service Academies (Post Selection Training)",
+          "score_rank_expectation": "AIR 1 - 1000 (IAS/IFS: AIR 1 - 100 General)",
+          "target_colleges": ["LBSNAA Mussoorie (IAS)", "SVPNPA Hyderabad (IPS)", "IGNFA Dehradun (IFS)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 11,
+      "exam_name": "VITEEE",
+      "category": "Engineering (UG)",
+      "conducting_body": "VIT University",
+      "selection_model": "University-Specific Rank Categories",
+      "college_mapping": [
+        {
+          "tier": "Category 1 & 2 Fees (Flagship Branch)",
+          "score_rank_expectation": "AIR 1 - 20,000",
+          "target_colleges": ["VIT Vellore", "VIT Chennai"]
+        },
+        {
+          "tier": "Category 3 - 5 Fees / Off-Campuses",
+          "score_rank_expectation": "AIR 20,001 - 100,000",
+          "target_colleges": ["VIT AP", "VIT Bhopal", "VIT Vellore (Higher Fee Category)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 12,
+      "exam_name": "MET (Manipal Entrance Test)",
+      "category": "Engineering (UG)",
+      "conducting_body": "MAHE Manipal",
+      "selection_model": "University-Specific Rank",
+      "college_mapping": [
+        {
+          "tier": "Flagship Campus (CS/IT)",
+          "score_rank_expectation": "AIR 1 - 2,500",
+          "target_colleges": ["Manipal Institute of Technology (MIT Manipal)"]
+        },
+        {
+          "tier": "Off-Campuses & Other Streams",
+          "score_rank_expectation": "AIR 2,501 - 20,000",
+          "target_colleges": ["MIT Bengaluru", "MU Jaipur", "Sikkim Manipal"]
+        }
+      ]
+    },
+    {
+      "exam_id": 13,
+      "exam_name": "SRMJEEE",
+      "category": "Engineering (UG)",
+      "conducting_body": "SRM Institute of Science and Technology",
+      "selection_model": "University-Specific Rank",
+      "college_mapping": [
+        {
+          "tier": "Flagship Campus (CS)",
+          "score_rank_expectation": "AIR 1 - 10,000",
+          "target_colleges": ["SRM Kattankulathur (KTR Campus)"]
+        },
+        {
+          "tier": "Other Campuses & Streams",
+          "score_rank_expectation": "AIR 10,001 - 50,000",
+          "target_colleges": ["SRM Ramapuram", "SRM NCR", "SRM AP", "SRM Haryana"]
+        }
+      ]
+    },
+    {
+      "exam_id": 14,
+      "exam_name": "COMEDK UGET",
+      "category": "Engineering (UG)",
+      "conducting_body": "COMEDK Karnataka",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Bangalore Engineering Colleges (CS/ECE)",
+          "score_rank_expectation": "AIR 1 - 3,000",
+          "target_colleges": ["RVCE Bangalore", "BMS College of Engineering", "MSRIT Bangalore"]
+        },
+        {
+          "tier": "Tier 2 Karnataka Private Colleges",
+          "score_rank_expectation": "AIR 3,001 - 15,000",
+          "target_colleges": ["Dayananda Sagar", "PES University (COMEDK quota)", "BIT Bangalore", "NIE Mysore"]
+        }
+      ]
+    },
+    {
+      "exam_id": 15,
+      "exam_name": "MHT CET",
+      "category": "Engineering & Pharmacy (UG)",
+      "conducting_body": "State CET Cell Maharashtra",
+      "selection_model": "Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Premier Maharashtra Autonomous Institutes",
+          "score_rank_expectation": "99.5+ Percentile",
+          "target_colleges": ["COEP Technological University Pune", "VJTI Mumbai", "SPIT Mumbai"]
+        },
+        {
+          "tier": "Top Regional Govt & Private Colleges",
+          "score_rank_expectation": "95.0 - 99.4 Percentile",
+          "target_colleges": ["PICT Pune", "VIT Pune", "Walchand College of Engineering Sangli"]
+        }
+      ]
+    },
+    {
+      "exam_id": 16,
+      "exam_name": "WBJEE",
+      "category": "Engineering (UG)",
+      "conducting_body": "West Bengal Joint Entrance Examinations Board",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top State University / Govt College",
+          "score_rank_expectation": "GMR 1 - 1,200",
+          "target_colleges": ["Jadavpur University (JU Kolkata)", "CU Kolkata"]
+        },
+        {
+          "tier": "Govt & Top Private Colleges in WB",
+          "score_rank_expectation": "GMR 1,201 - 10,000",
+          "target_colleges": ["KGEC Kalyani", "IEM Kolkata", "Heritage Institute of Technology"]
+        }
+      ]
+    },
+    {
+      "exam_id": 17,
+      "exam_name": "IPMAT (Indore)",
+      "category": "Management (Integrated UG/PG)",
+      "conducting_body": "IIM Indore",
+      "selection_model": "Benchmark Cutoff + Interview",
+      "college_mapping": [
+        {
+          "tier": "Premier 5-Year Integrated Management",
+          "score_rank_expectation": "Top 150 Applicants after PI",
+          "target_colleges": ["IIM Indore (IPM)", "IIM Ranchi", "IIFT Kakinada", "TAPMI (IPM)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 18,
+      "exam_name": "IPMAT (Rohtak)",
+      "category": "Management (Integrated UG/PG)",
+      "conducting_body": "IIM Rohtak",
+      "selection_model": "Rank Cutoff + Interview",
+      "college_mapping": [
+        {
+          "tier": "Premier 5-Year Integrated Management",
+          "score_rank_expectation": "Top 180 Applicants after PI",
+          "target_colleges": ["IIM Rohtak (IPM)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 19,
+      "exam_name": "JIPMAT",
+      "category": "Management (Integrated UG/PG)",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "5-Year Integrated Management at IIMs",
+          "score_rank_expectation": "Score 310+ / 400",
+          "target_colleges": ["IIM Jammu", "IIM Bodh Gaya"]
+        }
+      ]
+    },
+    {
+      "exam_id": 20,
+      "exam_name": "CUET UG",
+      "category": "Multidisciplinary (UG)",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Normalized Score Tier",
+      "college_mapping": [
+        {
+          "tier": "North Campus Delhi University & Top Central Universities",
+          "score_rank_expectation": "780+ / 800 (Score dependent)",
+          "target_colleges": ["St. Stephen's College", "SRCC", "Hindu College", "Miranda House", "JNU Delhi", "BHU Varanasi"]
+        },
+        {
+          "tier": "South Campus DU & Tier 2 Central Universities",
+          "score_rank_expectation": "680 - 779 marks",
+          "target_colleges": ["LSR New Delhi", "Venky Delhi", "University of Hyderabad", "Jamia Millia Islamia"]
+        }
+      ]
+    },
+    {
+      "exam_id": 21,
+      "exam_name": "CUET PG",
+      "category": "Multidisciplinary (PG)",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Score Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Top Central Universities PG Courses",
+          "score_rank_expectation": "230+ / 300 marks",
+          "target_colleges": ["JNU Delhi", "Delhi University (DU)", "BHU Varanasi", "UoH Hyderabad"]
+        }
+      ]
+    },
+    {
+      "exam_id": 22,
+      "exam_name": "NID DAT (Prelims + Mains)",
+      "category": "Design (UG/PG)",
+      "conducting_body": "National Institute of Design",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Premier Design Institutes",
+          "score_rank_expectation": "AIR 1 - 150",
+          "target_colleges": ["NID Ahmedabad (Gandhinagar/Bengaluru)", "NID Andhra Pradesh", "NID Haryana", "NID Madhya Pradesh", "NID Assam"]
+        }
+      ]
+    },
+    {
+      "exam_id": 23,
+      "exam_name": "UCEED",
+      "category": "Design (UG)",
+      "conducting_body": "IIT Bombay",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "B.Des at IITs and IISc",
+          "score_rank_expectation": "AIR 1 - 180",
+          "target_colleges": ["IIT Bombay", "IIT Delhi", "IIT Guwahati", "IIT Hyderabad", "IIITDM Jabalpur"]
+        }
+      ]
+    },
+    {
+      "exam_id": 24,
+      "exam_name": "NIFT Entrance Exam",
+      "category": "Fashion & Design (UG/PG)",
+      "conducting_body": "National Testing Agency / NIFT",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Flagship NIFT Campuses",
+          "score_rank_expectation": "AIR 1 - 500",
+          "target_colleges": ["NIFT New Delhi", "NIFT Mumbai", "NIFT Bengaluru"]
+        },
+        {
+          "tier": "Other NIFT Campuses across India",
+          "score_rank_expectation": "AIR 501 - 3,500",
+          "target_colleges": ["NIFT Kolkata", "NIFT Hyderabad", "NIFT Chennai", "NIFT Patna", "NIFT Kangra"]
+        }
+      ]
+    },
+    {
+      "exam_id": 25,
+      "exam_name": "CEED",
+      "category": "Design (PG - M.Des)",
+      "conducting_body": "IIT Bombay",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "M.Des at IITs / IISc",
+          "score_rank_expectation": "AIR 1 - 250",
+          "target_colleges": ["IISc Bangalore", "IIT Bombay", "IIT Delhi", "IIT Guwahati", "IIT Kanpur"]
+        }
+      ]
+    },
+    {
+      "exam_id": 26,
+      "exam_name": "NATA",
+      "category": "Architecture (B.Arch)",
+      "conducting_body": "Council of Architecture (CoA)",
+      "selection_model": "Score Threshold Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Top Architecture Colleges",
+          "score_rank_expectation": "140+ / 200 marks",
+          "target_colleges": ["SPA New Delhi", "SPA Bhopal", "SPA Vijayawada", "CEPT University Ahmedabad", "Sir JJ College of Architecture Mumbai"]
+        }
+      ]
+    },
+    {
+      "exam_id": 27,
+      "exam_name": "JEE Main Paper 2 (B.Arch / B.Planning)",
+      "category": "Architecture & Planning",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "SPAs & NIT Architecture Depts",
+          "score_rank_expectation": "99.2+ Percentile",
+          "target_colleges": ["School of Planning and Architecture (SPA Delhi)", "NIT Trichy B.Arch", "NIT Calicut Architecture"]
+        }
+      ]
+    },
+    {
+      "exam_id": 28,
+      "exam_name": "NEET PG",
+      "category": "Medical Specialization (MD/MS)",
+      "conducting_body": "National Board of Examinations (NBE)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Clinical Branches in Govt Medical Colleges",
+          "score_rank_expectation": "AIR 1 - 3,000",
+          "target_colleges": ["MAMC New Delhi", "KGMU Lucknow", "Seth GS Medical College Mumbai", "BMCRI Bangalore"]
+        }
+      ]
+    },
+    {
+      "exam_id": 29,
+      "exam_name": "INI CET",
+      "category": "Medical Specialization (MD/MS/MCh)",
+      "conducting_body": "AIIMS New Delhi",
+      "selection_model": "Binary Merit Rank",
+      "college_mapping": [
+        {
+          "tier": "Institutes of National Importance",
+          "score_rank_expectation": "AIR 1 - 1,200",
+          "target_colleges": ["AIIMS New Delhi", "PGIMER Chandigarh", "JIPMER Puducherry", "NIMHANS Bengaluru"]
+        }
+      ]
+    },
+    {
+      "exam_id": 30,
+      "exam_name": "NEET MDS",
+      "category": "Dental (MDS)",
+      "conducting_body": "National Board of Examinations (NBE)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Govt Dental Colleges (MDS)",
+          "score_rank_expectation": "AIR 1 - 400",
+          "target_colleges": ["Maulana Azad Institute of Dental Sciences New Delhi", "Govt Dental College Mumbai"]
+        }
+      ]
+    },
+    {
+      "exam_id": 31,
+      "exam_name": "NIMCET",
+      "category": "Computer Applications (MCA)",
+      "conducting_body": "NITs (Rotational)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top NIT MCA Programs",
+          "score_rank_expectation": "AIR 1 - 500",
+          "target_colleges": ["NIT Trichy", "NIT Surathkal", "MNNIT Allahabad", "NIT Warangal"]
+        }
+      ]
+    },
+    {
+      "exam_id": 32,
+      "exam_name": "SNAP",
+      "category": "Management (PG)",
+      "conducting_body": "Symbiosis International University",
+      "selection_model": "Percentile Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Flagship Symbiosis Institutes",
+          "score_rank_expectation": "98.5+ Percentile (SIBM), 97.0+ (SCMHRD)",
+          "target_colleges": ["SIBM Pune", "SCMHRD Pune"]
+        },
+        {
+          "tier": "Other Symbiosis B-Schools",
+          "score_rank_expectation": "80.0 - 96.0 Percentile",
+          "target_colleges": ["SIIB Pune", "SIBM Bengaluru", "SIMC Pune"]
+        }
+      ]
+    },
+    {
+      "exam_id": 33,
+      "exam_name": "NMAT by GMAC",
+      "category": "Management (PG)",
+      "conducting_body": "GMAC",
+      "selection_model": "Score Threshold",
+      "college_mapping": [
+        {
+          "tier": "Flagship NMIMS MBA",
+          "score_rank_expectation": "235+ / 360 Score",
+          "target_colleges": ["NMIMS Mumbai (School of Business Management)"]
+        },
+        {
+          "tier": "Off-Campuses & Partner Colleges",
+          "score_rank_expectation": "200 - 234 Score",
+          "target_colleges": ["NMIMS Bengaluru", "NMIMS Hyderabad", "K J Somaiya", "TAPMI"]
+        }
+      ]
+    },
+    {
+      "exam_id": 34,
+      "exam_name": "CMAT",
+      "category": "Management (PG)",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Top CMAT Accepting B-Schools",
+          "score_rank_expectation": "99.0+ Percentile",
+          "target_colleges": ["JBIMS Mumbai (MMS - CMAT Quota)", "SIMSREE Mumbai", "GIM Goa", "Great Lakes Chennai"]
+        }
+      ]
+    },
+    {
+      "exam_id": 35,
+      "exam_name": "MAT",
+      "category": "Management (PG)",
+      "conducting_body": "All India Management Association (AIMA)",
+      "selection_model": "Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Tier 2 / Tier 3 Management Institutes",
+          "score_rank_expectation": "80.0+ Percentile",
+          "target_colleges": ["PUMBA Pune", "XIME Bangalore", "BIMTECH Greater Noida", "Amity Business School"]
+        }
+      ]
+    },
+    {
+      "exam_id": 36,
+      "exam_name": "MAH MBA CET",
+      "category": "Management (PG)",
+      "conducting_body": "State CET Cell Maharashtra",
+      "selection_model": "Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Maharashtra Management Institutes",
+          "score_rank_expectation": "99.9+ Percentile (JBIMS), 99.8+ (SIMSREE)",
+          "target_colleges": ["Jamnalal Bajaj Institute of Management Studies (JBIMS Mumbai)", "SIMSREE Mumbai", "PUMBA Pune"]
+        }
+      ]
+    },
+    {
+      "exam_id": 37,
+      "exam_name": "MICAT",
+      "category": "Strategic Marketing / Comm (PG)",
+      "conducting_body": "MICA Ahmedabad",
+      "selection_model": "Composite Score (CAT/XAT/GMAT + MICAT + GE/PI)",
+      "college_mapping": [
+        {
+          "tier": "Premier Communications B-School",
+          "score_rank_expectation": "Top 200 Candidates selected",
+          "target_colleges": ["MICA Ahmedabad (PGDM-C / PGDM)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 38,
+      "exam_name": "TISSNET / TISSMAT (Legacy / CUET PG mapped)",
+      "category": "Social Sciences / HR",
+      "conducting_body": "Tata Institute of Social Sciences",
+      "selection_model": "Score Threshold + Interview",
+      "college_mapping": [
+        {
+          "tier": "Premier HR & Social Work College",
+          "score_rank_expectation": "Top percentile in CUET PG HR domain paper",
+          "target_colleges": ["TISS Mumbai (ODCL / HRM & LR)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 39,
+      "exam_name": "TSEC / TS EAMCET",
+      "category": "Engineering & Agriculture (UG)",
+      "conducting_body": "JNTU Hyderabad for TSCHE",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Telangana State Engineering Colleges",
+          "score_rank_expectation": "AIR 1 - 3,000",
+          "target_colleges": ["JNTU College of Engineering Hyderabad", "OU College of Engineering", "CBIT Hyderabad", "Vasavi College"]
+        }
+      ]
+    },
+    {
+      "exam_id": 40,
+      "exam_name": "AP EAPCET (AP EAMCET)",
+      "category": "Engineering & Agriculture (UG)",
+      "conducting_body": "JNTU Kakinada for APSCHE",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Andhra Pradesh State Engineering Colleges",
+          "score_rank_expectation": "AIR 1 - 4,000",
+          "target_colleges": ["AU College of Engineering Visakhapatnam", "JNTU Kakinada", "SVU College of Engineering Tirupati"]
+        }
+      ]
+    },
+    {
+      "exam_id": 41,
+      "exam_name": "KCET",
+      "category": "Engineering & Agriculture (UG)",
+      "conducting_body": "Karnataka Examinations Authority (KEA)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Karnataka State Govt & Aided Colleges",
+          "score_rank_expectation": "Rank 1 - 2,000",
+          "target_colleges": ["RVCE Bangalore (KCET Quota)", "BMSCE Bangalore", "UVCE Bangalore", "MSRIT"]
+        }
+      ]
+    },
+    {
+      "exam_id": 42,
+      "exam_name": "KEAM",
+      "category": "Engineering (UG)",
+      "conducting_body": "Commissioner for Entrance Examinations (CEE) Kerala",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Kerala Govt Engineering Colleges",
+          "score_rank_expectation": "Rank 1 - 1,500",
+          "target_colleges": ["College of Engineering Trivandrum (CET)", "Government Model Engineering College Kochi", "GEC Thrissur"]
+        }
+      ]
+    },
+    {
+      "exam_id": 43,
+      "exam_name": "GUJCET",
+      "category": "Engineering & Pharmacy (UG)",
+      "conducting_body": "GSEB Gujarat",
+      "selection_model": "Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Gujarat Engineering Colleges",
+          "score_rank_expectation": "98.0+ Percentile",
+          "target_colleges": ["LD College of Engineering Ahmedabad", "Nirma University (State Quota)", "BVM Engineering College"]
+        }
+      ]
+    },
+    {
+      "exam_id": 44,
+      "exam_name": "OJEE",
+      "category": "Engineering / Management / Pharmacy",
+      "conducting_body": "OJEE Committee Odisha",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Odisha Govt Colleges",
+          "score_rank_expectation": "Rank 1 - 1,000",
+          "target_colleges": ["OUTR Bhubaneswar (formerly CET)", "VSSUT Burla"]
+        }
+      ]
+    },
+    {
+      "exam_id": 45,
+      "exam_name": "UPTAC (formerly UPSEE / AKTU Entrance)",
+      "category": "Engineering & Professional (UG)",
+      "conducting_body": "AKTU Uttar Pradesh",
+      "selection_model": "JEE Main Rank Counselling Tier",
+      "college_mapping": [
+        {
+          "tier": "Top UP State Govt Autonomous Engineering Colleges",
+          "score_rank_expectation": "JEE Main AIR 1 - 50,000",
+          "target_colleges": ["IET Lucknow", "MMMUT Gorakhpur", "BIET Jhansi", "KNIT Sultanpur"]
+        }
+      ]
+    },
+    {
+      "exam_id": 46,
+      "exam_name": "NEST",
+      "category": "Pure Sciences (Integrated M.Sc)",
+      "conducting_body": "NISER Bhubaneswar & UM-DAE CEBS",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Premier Autonomous Science Research Institutes",
+          "score_rank_expectation": "AIR 1 - 500",
+          "target_colleges": ["NISER Bhubaneswar", "UM-DAE CEBS Mumbai"]
+        }
+      ]
+    },
+    {
+      "exam_id": 47,
+      "exam_name": "IAT (IISER Aptitude Test)",
+      "category": "Pure Sciences (BS-MS)",
+      "conducting_body": "IISERs",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "IISERs and Premier Research Colleges",
+          "score_rank_expectation": "AIR 1 - 3,000",
+          "target_colleges": ["IISc Bangalore (BS Prog)", "IISER Pune", "IISER Kolkata", "IISER Mohali", "IISER Bhopal", "IIT Madras (BS)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 48,
+      "exam_name": "ISI Admission Test",
+      "category": "Statistics & Mathematics (B.Stat / B.Math)",
+      "conducting_body": "Indian Statistical Institute",
+      "selection_model": "Binary Merit + Interview",
+      "college_mapping": [
+        {
+          "tier": "Exclusive Elite Statistical Research Institute",
+          "score_rank_expectation": "Top 100 Applicants",
+          "target_colleges": ["ISI Kolkata", "ISI Bangalore", "ISI Delhi"]
+        }
+      ]
+    },
+    {
+      "exam_id": 49,
+      "exam_name": "CMI Entrance Examination",
+      "category": "Mathematics & Computer Science",
+      "conducting_body": "Chennai Mathematical Institute",
+      "selection_model": "Binary Merit",
+      "college_mapping": [
+        {
+          "tier": "Premier Theoretical Math & CS Institute",
+          "score_rank_expectation": "Top 75 Applicants",
+          "target_colleges": ["Chennai Mathematical Institute (CMI Chennai)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 50,
+      "exam_name": "JAM (IIT JAM)",
+      "category": "Pure Sciences (M.Sc / Joint M.Sc-Ph.D)",
+      "conducting_body": "IITs (Rotational)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "M.Sc Programs at IITs and IISc",
+          "score_rank_expectation": "AIR 1 - 600",
+          "target_colleges": ["IISc Bangalore", "IIT Bombay", "IIT Delhi", "IIT Kanpur", "IIT Kharagpur"]
+        }
+      ]
+    },
+    {
+      "exam_id": 51,
+      "exam_name": "TIFR GS (Graduate School Admissions)",
+      "category": "Basic Sciences & Research (Ph.D / Integrated Ph.D)",
+      "conducting_body": "Tata Institute of Fundamental Research",
+      "selection_model": "Binary Interview Selection",
+      "college_mapping": [
+        {
+          "tier": "Premier Fundamental Research Institute",
+          "score_rank_expectation": "Top shortlist candidates + Interview clearance",
+          "target_colleges": ["TIFR Mumbai", "NCBS Bengaluru", "ICTS Bangalore"]
+        }
+      ]
+    },
+    {
+      "exam_id": 52,
+      "exam_name": "JEST (Joint Entrance Screening Test)",
+      "category": "Physics / Theoretical Computer Science",
+      "conducting_body": "Jointly by SERB Research Institutes",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "National Physics Research Institutes",
+          "score_rank_expectation": "AIR 1 - 300",
+          "target_colleges": ["HRI Allahabad", "RRI Bengaluru", "IIA Bengaluru", "SINP Kolkata"]
+        }
+      ]
+    },
+    {
+      "exam_id": 53,
+      "exam_name": "CSIR NET",
+      "category": "Science Research Fellowship / Assistant Professorship",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Score Threshold / JRF Rank",
+      "college_mapping": [
+        {
+          "tier": "CSIR Laboratories & Universities across India",
+          "score_rank_expectation": "JRF Qualification (Top ~1.5%)",
+          "target_colleges": ["CSIR-NCL Pune", "CSIR-CCMB Hyderabad", "CSIR-CDRI Lucknow", "Central Universities"]
+        }
+      ]
+    },
+    {
+      "exam_id": 54,
+      "exam_name": "UGC NET",
+      "category": "Humanities / Commerce Professorship & JRF",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Score Threshold Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Central & State Universities",
+          "score_rank_expectation": "JRF cutoff (~99.0+ Percentile)",
+          "target_colleges": ["Delhi University", "JNU", "BHU", "Central University of Punjab"]
+        }
+      ]
+    },
+    {
+      "exam_id": 55,
+      "exam_name": "SLAT (Symbiosis Law Admission Test)",
+      "category": "Law (UG)",
+      "conducting_body": "Symbiosis International University",
+      "selection_model": "Score + PI/WAT",
+      "college_mapping": [
+        {
+          "tier": "Premier Private Law Schools",
+          "score_rank_expectation": "45+ / 60 marks in written test",
+          "target_colleges": ["Symbiosis Law School (SLS Pune)", "SLS Noida", "SLS Hyderabad"]
+        }
+      ]
+    },
+    {
+      "exam_id": 56,
+      "exam_name": "LSAT-India (Legacy / Private Law Admissions)",
+      "category": "Law (UG/PG)",
+      "conducting_body": "LSAC",
+      "selection_model": "Percentile Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Private Law Universities",
+          "score_rank_expectation": "90.0+ Percentile",
+          "target_colleges": ["Jindal Global Law School (JGLS Sonipat)", "Alliance University Law", "UPES Law"]
+        }
+      ]
+    },
+    {
+      "exam_id": 57,
+      "exam_name": "MHCET Law (5-Year / 3-Year)",
+      "category": "Law (UG)",
+      "conducting_body": "State CET Cell Maharashtra",
+      "selection_model": "Score / Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Top Maharashtra Law Colleges",
+          "score_rank_expectation": "115+ / 150 marks",
+          "target_colleges": ["Government Law College (GLC Mumbai)", "ILS Law College Pune"]
+        }
+      ]
+    },
+    {
+      "exam_id": 58,
+      "exam_name": "AIBE (All India Bar Examination)",
+      "category": "Law Practice Certification",
+      "conducting_body": "Bar Council of India",
+      "selection_model": "Binary Qualifying Pass/Fail",
+      "college_mapping": [
+        {
+          "tier": "Licensing Body (Non-College)",
+          "score_rank_expectation": "45% Minimum Qualifying Marks",
+          "target_colleges": ["Bar Council of India Advocate Enrollment"]
+        }
+      ]
+    },
+    {
+      "exam_id": 59,
+      "exam_name": "AEEE (Amrita Engineering Entrance Exam)",
+      "category": "Engineering (UG)",
+      "conducting_body": "Amrita Vishwa Vidyapeetham",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Amrita Flagship Campuses",
+          "score_rank_expectation": "AIR 1 - 5,000",
+          "target_colleges": ["Amrita Coimbatore", "Amrita Amritapuri", "Amrita Bengaluru"]
+        }
+      ]
+    },
+    {
+      "exam_id": 60,
+      "exam_name": "PESSAT",
+      "category": "Engineering & Professional (UG)",
+      "conducting_body": "PES University Bangalore",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "PES Campuses CS/ECE",
+          "score_rank_expectation": "AIR 1 - 1,500",
+          "target_colleges": ["PES University Ring Road Campus", "PES University Electronic City Campus"]
+        }
+      ]
+    },
+    {
+      "exam_id": 61,
+      "exam_name": "KITTEE",
+      "category": "Engineering & Professional (UG)",
+      "conducting_body": "KIIT University Bhubaneswar",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "KIIT Main Campus",
+          "score_rank_expectation": "AIR 1 - 8,000",
+          "target_colleges": ["Kalinga Institute of Industrial Technology (KIIT Bhubaneswar)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 62,
+      "exam_name": "SITEEE",
+      "category": "Engineering (UG)",
+      "conducting_body": "Symbiosis International University",
+      "selection_model": "Score Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Symbiosis Engineering Institute",
+          "score_rank_expectation": "Top 1,000 Rank",
+          "target_colleges": ["Symbiosis Institute of Technology (SIT Pune)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 63,
+      "exam_name": "BVP CET",
+      "category": "Engineering & Medical (UG)",
+      "conducting_body": "Bharati Vidyapeeth Deemed University",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "BVDU Colleges",
+          "score_rank_expectation": "Rank 1 - 2,000",
+          "target_colleges": ["Bharati Vidyapeeth College of Engineering Pune"]
+        }
+      ]
+    },
+    {
+      "exam_id": 64,
+      "exam_name": "CA Foundation",
+      "category": "Commerce / Professional Certification",
+      "conducting_body": "ICAI",
+      "selection_model": "Binary Qualifying Benchmark",
+      "college_mapping": [
+        {
+          "tier": "ICAI Professional Course Entry",
+          "score_rank_expectation": "50% Aggregate + Min 40% per paper",
+          "target_colleges": ["ICAI Intermediate Progression"]
+        }
+      ]
+    },
+    {
+      "exam_id": 65,
+      "exam_name": "CA Intermediate",
+      "category": "Commerce / Professional Certification",
+      "conducting_body": "ICAI",
+      "selection_model": "Binary Qualifying Benchmark",
+      "college_mapping": [
+        {
+          "tier": "Articleship Placement at Top Audit Firms",
+          "score_rank_expectation": "Both Groups Single Attempt / AIR 1-50",
+          "target_colleges": ["Big 4 Accounting Firms (Deloitte, PwC, EY, KPMG)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 66,
+      "exam_name": "CS Executive Entrance Test (CSEET)",
+      "category": "Corporate Governance & Law",
+      "conducting_body": "ICSI",
+      "selection_model": "Binary Qualifying Pass",
+      "college_mapping": [
+        {
+          "tier": "ICSI Professional Course Entry",
+          "score_rank_expectation": "50% Aggregate",
+          "target_colleges": ["ICSI CS Executive Course Enrollment"]
+        }
+      ]
+    },
+    {
+      "exam_id": 67,
+      "exam_name": "CMA Foundation",
+      "category": "Cost & Management Accounting",
+      "conducting_body": "ICMAI",
+      "selection_model": "Binary Qualifying Pass",
+      "college_mapping": [
+        {
+          "tier": "ICMAI Certification Progression",
+          "score_rank_expectation": "50% Aggregate",
+          "target_colleges": ["ICMAI Intermediate Course Enrollment"]
+        }
+      ]
+    },
+    {
+      "exam_id": 68,
+      "exam_name": "CPGET",
+      "category": "Postgraduate Arts / Science / Commerce",
+      "conducting_body": "Osmania University Telangana",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Telangana State Universities PG",
+          "score_rank_expectation": "Rank 1 - 500",
+          "target_colleges": ["Osmania University Hyderabad", "Kakatiya University Warangal"]
+        }
+      ]
+    },
+    {
+      "exam_id": 69,
+      "exam_name": "NCHMCT JEE",
+      "category": "Hotel Management (B.Sc HHA)",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Premier Central IHMs",
+          "score_rank_expectation": "AIR 1 - 800",
+          "target_colleges": ["IHM Pusa New Delhi", "IHM Mumbai", "IHM Bangalore"]
+        },
+        {
+          "tier": "State & Private IHMs",
+          "score_rank_expectation": "AIR 801 - 8,000",
+          "target_colleges": ["IHM Kolkata", "IHM Chennai", "IHM Hyderabad"]
+        }
+      ]
+    },
+    {
+      "exam_id": 70,
+      "exam_name": "AIHMCT WAT",
+      "category": "Hotel Management",
+      "conducting_body": "Army Institute of Hotel Management",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Defence Wards Hotel Mgmt Institute",
+          "score_rank_expectation": "Top 120 Rank",
+          "target_colleges": ["AIHMCT Bangalore"]
+        }
+      ]
+    },
+    {
+      "exam_id": 71,
+      "exam_name": "ICAR AIEEA (UG / PG)",
+      "category": "Agriculture & Allied Sciences",
+      "conducting_body": "National Testing Agency (NTA)",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Premier Agricultural Universities",
+          "score_rank_expectation": "AIR 1 - 1,000",
+          "target_colleges": ["IARI New Delhi", "GBPUAT Pantnagar", "PAU Ludhiana", "TNAU Coimbatore"]
+        }
+      ]
+    },
+    {
+      "exam_id": 72,
+      "exam_name": "NDA Written Exam",
+      "category": "Defence Services (UG Officer Cadet)",
+      "conducting_body": "UPSC",
+      "selection_model": "Binary Cutoff + SSB Interview",
+      "college_mapping": [
+        {
+          "tier": "Tri-Services National Defence Academy",
+          "score_rank_expectation": "360+ / 900 Written + SSB Recommendation",
+          "target_colleges": ["National Defence Academy (NDA Khadakwasla Pune)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 73,
+      "exam_name": "CDS (Combined Defence Services)",
+      "category": "Defence Services (Graduate Officer Cadre)",
+      "conducting_body": "UPSC",
+      "selection_model": "Cutoff + SSB Interview",
+      "college_mapping": [
+        {
+          "tier": "Military Officer Training Academies",
+          "score_rank_expectation": "140+ / 300 (IMA), 150+ (AFA) + SSB",
+          "target_colleges": ["IMA Dehradun", "INA Ezhimala", "AFA Hyderabad", "OTA Chennai"]
+        }
+      ]
+    },
+    {
+      "exam_id": 74,
+      "exam_name": "AFCAT",
+      "category": "Indian Air Force Commissioned Officer",
+      "conducting_body": "Indian Air Force",
+      "selection_model": "Cutoff + AFSB Interview",
+      "college_mapping": [
+        {
+          "tier": "Air Force Academy",
+          "score_rank_expectation": "155+ / 300 marks + AFSB Clearance",
+          "target_colleges": ["Air Force Academy (AFA Dundigal)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 75,
+      "exam_name": "INET (Indian Navy Entrance Test)",
+      "category": "Navy Commissioned Officer",
+      "conducting_body": "Indian Navy",
+      "selection_model": "Cutoff + SSB",
+      "college_mapping": [
+        {
+          "tier": "Naval Academy Training",
+          "score_rank_expectation": "Cutoff mark + SSB clearance",
+          "target_colleges": ["Indian Naval Academy (INA Ezhimala)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 76,
+      "exam_name": "SSC CGL",
+      "category": "Government Services (Group B/C)",
+      "conducting_body": "Staff Selection Commission",
+      "selection_model": "Merit List Allocation",
+      "college_mapping": [
+        {
+          "tier": "Ministries & Govt Training Academies (Non-College)",
+          "score_rank_expectation": "310+ / 390 in Tier 2 Mains",
+          "target_colleges": ["Ministry of External Affairs", "Central Secretariat Service", "CBIC (GST Inspector)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 77,
+      "exam_name": "RBI Grade B Exam",
+      "category": "Central Banking / Officer Cadre",
+      "conducting_body": "Reserve Bank of India",
+      "selection_model": "Phase I & II Merit + Interview",
+      "college_mapping": [
+        {
+          "tier": "Central Bank Officer Cadre",
+          "score_rank_expectation": "Top ~200 candidates nationwide",
+          "target_colleges": ["Reserve Bank Staff College Chennai / RBI Officers"]
+        }
+      ]
+    },
+    {
+      "exam_id": 78,
+      "exam_name": "SBI PO Exam",
+      "category": "Banking Sector",
+      "conducting_body": "State Bank of India",
+      "selection_model": "Prelims + Mains + GD/PI",
+      "college_mapping": [
+        {
+          "tier": "Public Sector Bank Officer",
+          "score_rank_expectation": "Top 2,000 candidates nationwide",
+          "target_colleges": ["State Bank Academy Gurgaon (PO Trainees)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 79,
+      "exam_name": "IBPS PO Exam",
+      "category": "Banking Sector",
+      "conducting_body": "IBPS",
+      "selection_model": "Prelims + Mains + Interview",
+      "college_mapping": [
+        {
+          "tier": "Public Sector Banks",
+          "score_rank_expectation": "Merit allotment based on preference",
+          "target_colleges": ["Bank of Baroda", "Punjab National Bank", "Canara Bank", "Union Bank"]
+        }
+      ]
+    },
+    {
+      "exam_id": 80,
+      "exam_name": "NABARD Grade A",
+      "category": "Rural & Agri Development Banking",
+      "conducting_body": "NABARD",
+      "selection_model": "Phase I, II & Interview",
+      "college_mapping": [
+        {
+          "tier": "Apex Development Bank",
+          "score_rank_expectation": "Top ~150 candidates nationwide",
+          "target_colleges": ["National Bank for Agriculture and Rural Development Officers"]
+        }
+      ]
+    },
+    {
+      "exam_id": 81,
+      "exam_name": "SEBI Grade A",
+      "category": "Financial Regulatory Body",
+      "conducting_body": "Securities and Exchange Board of India",
+      "selection_model": "Phase I, II & Interview",
+      "college_mapping": [
+        {
+          "tier": "Capital Markets Regulator",
+          "score_rank_expectation": "Top ~100 officers nationwide",
+          "target_colleges": ["NISM Mumbai / SEBI Officer Cadre"]
+        }
+      ]
+    },
+    {
+      "exam_id": 82,
+      "exam_name": "GRE (Graduate Record Examination)",
+      "category": "Global STEM & Multidisciplinary PG",
+      "conducting_body": "ETS",
+      "selection_model": "Score Band Mapping",
+      "college_mapping": [
+        {
+          "tier": "Global Top 20 Universities (Ivy League / Top CS)",
+          "score_rank_expectation": "325+ / 340 (Quant 168+)",
+          "target_colleges": ["MIT", "Stanford", "Carnegie Mellon", "Harvard", "UC Berkeley", "Oxford"]
+        },
+        {
+          "tier": "Global Top 21 - 100 Universities",
+          "score_rank_expectation": "310 - 324 Score",
+          "target_colleges": ["NYU", "Texas A&M", "University of Michigan", "TU Munich", "NUS Singapore"]
+        }
+      ]
+    },
+    {
+      "exam_id": 83,
+      "exam_name": "GMAT Focus Edition",
+      "category": "Global Management / MBA",
+      "conducting_body": "GMAC",
+      "selection_model": "Score Band Mapping",
+      "college_mapping": [
+        {
+          "tier": "Global Elite B-Schools (M7 / Top European)",
+          "score_rank_expectation": "675+ Focus Score (~730+ Legacy GMAT)",
+          "target_colleges": ["INSEAD", "Harvard Business School", "Stanford GSB", "Wharton", "London Business School", "ISB Hyderabad"]
+        },
+        {
+          "tier": "Global Tier 1.5 B-Schools",
+          "score_rank_expectation": "625 - 674 Focus Score",
+          "target_colleges": ["HEC Paris", "NUS Business School", "Rotman Toronto", "IIMs (Executive MBA)"]
+        }
+      ]
+    },
+    {
+      "exam_id": 84,
+      "exam_name": "SAT",
+      "category": "Global Undergraduate Admissions",
+      "conducting_body": "College Board",
+      "selection_model": "Score Band Mapping",
+      "college_mapping": [
+        {
+          "tier": "Top US Ivy League & Global Top 20 UG",
+          "score_rank_expectation": "1500+ / 1600",
+          "target_colleges": ["MIT", "Harvard", "Yale", "Princeton", "Stanford", "NUS Singapore"]
+        },
+        {
+          "tier": "Top US State Universities & Indian Private UG",
+          "score_rank_expectation": "1350 - 1490 Score",
+          "target_colleges": ["UC Berkeley", "UIUC", "Purdue", "Ashoka University (India)", "Plaksha University"]
+        }
+      ]
+    },
+    {
+      "exam_id": 85,
+      "exam_name": "TOEFL iBT",
+      "category": "English Proficiency (Global)",
+      "conducting_body": "ETS",
+      "selection_model": "Binary Minimum Score Threshold",
+      "college_mapping": [
+        {
+          "tier": "Global Top Tier Universities Requirement",
+          "score_rank_expectation": "100+ / 120 (Min 25 per section)",
+          "target_colleges": ["Harvard", "Oxford", "ETH Zurich", "University of Toronto"]
+        }
+      ]
+    },
+    {
+      "exam_id": 86,
+      "exam_name": "IELTS Academic",
+      "category": "English Proficiency (Global)",
+      "conducting_body": "IDP Education / Cambridge",
+      "selection_model": "Band Score Threshold",
+      "college_mapping": [
+        {
+          "tier": "Global Top Tier Universities Requirement",
+          "score_rank_expectation": "7.5+ Overall Band (Min 7.0 each section)",
+          "target_colleges": ["University of Cambridge", "Imperial College London", "University of Melbourne", "UBC Canada"]
+        }
+      ]
+    },
+    {
+      "exam_id": 87,
+      "exam_name": "USMLE (Step 1 & Step 2 CK)",
+      "category": "Medical Residency (USA)",
+      "conducting_body": "FSMB & NBME",
+      "selection_model": "Pass/Fail (Step 1) + High Score (Step 2 CK)",
+      "college_mapping": [
+        {
+          "tier": "US University Teaching Hospitals Residency",
+          "score_rank_expectation": "Step 1 Pass + Step 2 CK Score 250+",
+          "target_colleges": ["Johns Hopkins Hospital", "Mayo Clinic Residency", "Cleveland Clinic Residency"]
+        }
+      ]
+    },
+    {
+      "exam_id": 88,
+      "exam_name": "PLAB (Part 1 & Part 2)",
+      "category": "Medical Licensing (UK NHS)",
+      "conducting_body": "General Medical Council (GMC) UK",
+      "selection_model": "Binary Qualifying Pass",
+      "college_mapping": [
+        {
+          "tier": "UK National Health Service (NHS) Hospitals",
+          "score_rank_expectation": "Passing marks in Part 1 + Part 2 OSCE",
+          "target_colleges": ["NHS Foundation Trusts UK"]
+        }
+      ]
+    },
+    {
+      "exam_id": 89,
+      "exam_name": "GPAT (Graduate Pharmacy Aptitude Test)",
+      "category": "Pharmacy (M.Pharm)",
+      "conducting_body": "NBEMS / NTA",
+      "selection_model": "Rank / Score Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Premier Pharmacy Research Institutes",
+          "score_rank_expectation": "AIR 1 - 500",
+          "target_colleges": ["NIPER Mohali", "NIPER Ahmedabad", "ICT Mumbai (M.Pharm)", "Jamia Hamdard"]
+        }
+      ]
+    },
+    {
+      "exam_id": 90,
+      "exam_name": "NIPER JEE",
+      "category": "Pharmacy PG / M.S. (Pharm)",
+      "conducting_body": "NIPERs",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "National Institutes of Pharmaceutical Education",
+          "score_rank_expectation": "AIR 1 - 300",
+          "target_colleges": ["NIPER Mohali", "NIPER Hyderabad", "NIPER Ahmedabad", "NIPER Guwahati"]
+        }
+      ]
+    },
+    {
+      "exam_id": 91,
+      "exam_name": "CEED / M.Des State Entrances",
+      "category": "Design & Fine Arts PG",
+      "conducting_body": "Respective State / University Boards",
+      "selection_model": "Portfolio + Test Score",
+      "college_mapping": [
+        {
+          "tier": "Top Fine Arts & Design Institutes",
+          "score_rank_expectation": "Merit Score Clearance",
+          "target_colleges": ["Sir JJ School of Art Mumbai", "College of Art New Delhi"]
+        }
+      ]
+    },
+    {
+      "exam_id": 92,
+      "exam_name": "AIESL / AME CET",
+      "category": "Aircraft Maintenance Engineering",
+      "conducting_body": "AME CET Board",
+      "selection_model": "Rank Allotment",
+      "college_mapping": [
+        {
+          "tier": "DGCA Approved AME Training Institutes",
+          "score_rank_expectation": "AIR 1 - 2,000",
+          "target_colleges": ["School of Aeronautics Neemrana", "Indira Gandhi Institute of Aeronautics"]
+        }
+      ]
+    },
+    {
+      "exam_id": 93,
+      "exam_name": "IMU CET",
+      "category": "Maritime & Marine Engineering (UG)",
+      "conducting_body": "Indian Maritime University",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "Premier Govt Marine Academies",
+          "score_rank_expectation": "AIR 1 - 1,000",
+          "target_colleges": ["IMU Kolkata (MERI)", "IMU Navi Mumbai (T.S. Chanakya)", "IMU Chennai"]
+        },
+        {
+          "tier": "Top DGCA/Maritime Approved Private Institutes",
+          "score_rank_expectation": "AIR 1,001 - 5,000",
+          "target_colleges": ["Tolani Maritime Institute (TMI Pune)", "Anglo-Eastern Maritime Academy"]
+        }
+      ]
+    },
+    {
+      "exam_id": 94,
+      "exam_name": "FDDI AIST",
+      "category": "Footwear & Design Technology",
+      "conducting_body": "Footwear Design & Development Institute",
+      "selection_model": "Rank Tier",
+      "college_mapping": [
+        {
+          "tier": "INIs in Footwear Design",
+          "score_rank_expectation": "AIR 1 - 500",
+          "target_colleges": ["FDDI Noida", "FDDI Firozabad", "FDDI Kolkata", "FDDI Rohtak"]
+        }
+      ]
+    },
+    {
+      "exam_id": 95,
+      "exam_name": "IIPC / IILET (Indian Institute of Packaging)",
+      "category": "Packaging Technology PG",
+      "conducting_body": "Indian Institute of Packaging",
+      "selection_model": "Entrance Test + Interview",
+      "college_mapping": [
+        {
+          "tier": "National Packaging Education Body",
+          "score_rank_expectation": "Top 200 Rank",
+          "target_colleges": ["IIP Mumbai", "IIP Delhi", "IIP Kolkata"]
+        }
+      ]
+    },
+    {
+      "exam_id": 96,
+      "exam_name": "AIISH Entrance Exam",
+      "category": "Audiology & Speech Language Pathology",
+      "conducting_body": "All India Institute of Speech and Hearing",
+      "selection_model": "Rank Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Premier Autonomous Healthcare Institute",
+          "score_rank_expectation": "AIR 1 - 150",
+          "target_colleges": ["AIISH Mysore"]
+        }
+      ]
+    },
+    {
+      "exam_id": 97,
+      "exam_name": "SNDT CET / Women's University Entrances",
+      "category": "Women's Higher Education & Professional Degrees",
+      "conducting_body": "SNDT Women's University",
+      "selection_model": "Merit Cutoff",
+      "college_mapping": [
+        {
+          "tier": "Premier Women's University",
+          "score_rank_expectation": "85%+ Aggregate / Rank Cutoff",
+          "target_colleges": ["SNDT Women's University Mumbai"]
+        }
+      ]
+    },
+    {
+      "exam_id": 98,
+      "exam_name": "TERI SAS Entrance Exam",
+      "category": "Sustainable Development & Environment Science",
+      "conducting_body": "TERI School of Advanced Studies",
+      "selection_model": "Written Test + Interview",
+      "college_mapping": [
+        {
+          "tier": "Specialized Environmental Policy University",
+          "score_rank_expectation": "Merit clearance in domain subject",
+          "target_colleges": ["TERI SAS New Delhi"]
+        }
+      ]
+    },
+    {
+      "exam_id": 99,
+      "exam_name": "REAP / State Directorate of Tech Ed",
+      "category": "Engineering (UG Admissions via Board/JEE)",
+      "conducting_body": "CEG Rajasthan",
+      "selection_model": "Merit Rank Mapping",
+      "college_mapping": [
+        {
+          "tier": "Top State Govt Engineering Colleges in Rajasthan",
+          "score_rank_expectation": "JEE Main AIR 1 - 40,000 / Board 92%+",
+          "target_colleges": ["MBM University Jodhpur", "CTAET Udaipur", "RTU Kota"]
+        }
+      ]
+    },
+    {
+      "exam_id": 100,
+      "exam_name": "JAC Delhi Counselling Entrance Mapping",
+      "category": "Engineering (UG)",
+      "conducting_body": "Joint Admission Committee Delhi",
+      "selection_model": "JEE Main Rank Mapping",
+      "college_mapping": [
+        {
+          "tier": "Top Delhi State Tech Universities (Delhi Region / Outside Delhi)",
+          "score_rank_expectation": "JEE Main AIR 1 - 15,000 (Delhi Region), AIR 1 - 4,000 (Outside Delhi)",
+          "target_colleges": ["DTU (Delhi Technological University)", "NSUT (Netaji Subhas University of Technology)", "IGDTUW (Women)", "IIIT Delhi"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "project": "Antigravity Exam Feasibility Engine",
+  "data_type": "college_and_external_scholarships",
+  "version": "1.0",
+  "scholarships": [
+    {
+      "id": "SCH_DST_INSPIRE_SHE",
+      "name": "INSPIRE Scholarship for Higher Education (SHE)",
+      "provider": "Department of Science & Technology (DST), Govt. of India",
+      "category": "Merit-Based / Government",
+      "official_url": "https://online-inspire.gov.in",
+      "target_courses": ["B.Sc.", "B.S.", "Int. M.Sc.", "Int. M.S."],
+      "financial_aid": {
+        "annual_amount_inr": 80000,
+        "breakdown": "₹60,000 cash grant + ₹20,000 mentorship/summer project allowance"
+      },
+      "eligibility_criteria": {
+        "academic_performance": {
+          "min_percentage_10_2": 90.0,
+          "percentile_in_board_exam": "Top 1%"
+        },
+        "entrance_exam_rank_cutoffs": {
+          "JEE_Advanced": 10000,
+          "JEE_Main": 10000,
+          "NEET_UG": 10000
+        },
+        "max_family_income_inr": null,
+        "age_limit": {
+          "min": 17,
+          "max": 22
+        },
+        "domicile": "India",
+        "special_eligibility": "KVPY, NTSE, JBNSTS scholars or International Olympiad Medalists pursuing basic/natural sciences."
+      }
+    },
+    {
+      "id": "SCH_RF_UG_2026",
+      "name": "Reliance Foundation Undergraduate Scholarship",
+      "provider": "Reliance Foundation",
+      "category": "Means-cum-Merit / Private CSR",
+      "official_url": "https://www.scholarships.reliancefoundation.org",
+      "target_courses": ["B.Tech", "B.E.", "B.Com", "B.Sc.", "B.A.", "LL.B", "MBBS"],
+      "financial_aid": {
+        "total_amount_inr": 200000,
+        "tenure_years": 4,
+        "breakdown": "Up to ₹2,00,000 over the duration of the degree program"
+      },
+      "eligibility_criteria": {
+        "academic_performance": {
+          "min_percentage_10_2": 60.0
+        },
+        "enrollment_status": "Must be enrolled in 1st year of full-time regular UG degree in India",
+        "max_family_income_inr": 1500000,
+        "preferred_family_income_inr": 250000,
+        "assessment_requirement": "Mandatory online aptitude test administered by Reliance Foundation"
+      }
+    },
+    {
+      "id": "SCH_NSP_TOP_CLASS_SC",
+      "name": "Central Sector Top Class Education Scheme for SC Students",
+      "provider": "Ministry of Social Justice and Empowerment (NSP Portal)",
+      "category": "Need-Based / Social Category",
+      "official_url": "https://scholarships.gov.in",
+      "target_courses": ["B.Tech", "MBBS", "B.A. LL.B", "MBA", "Design"],
+      "financial_aid": {
+        "tuition_coverage": "100% full tuition fee",
+        "living_allowance_inr": 3000,
+        "one_time_hardware_allowance_inr": 45000
+      },
+      "eligibility_criteria": {
+        "category_restriction": ["SC"],
+        "max_family_income_inr": 800000,
+        "institutional_requirement": "Must secure admission into notified top-tier institutes (IITs, NITs, IIMs, AIIMS, NLUs, IIITs)",
+        "academic_performance": {
+          "min_percentage_10_2": 60.0
+        }
+      }
+    },
+    {
+      "id": "SCH_ADITYA_BIRLA_UG",
+      "name": "Aditya Birla Capital Scholarship",
+      "provider": "Aditya Birla Capital Foundation",
+      "category": "Means-cum-Merit / Corporate CSR",
+      "official_url": "https://www.adityabirlacapital.com",
+      "target_courses": ["B.Tech", "B.E.", "B.Sc.", "B.Com", "B.A.", "Professional UG"],
+      "financial_aid": {
+        "annual_amount_inr": 36000,
+        "breakdown": "One-time annual grant of ₹36,000 for standard UG, up to ₹60,000 for professional degree programs"
+      },
+      "eligibility_criteria": {
+        "academic_performance": {
+          "min_percentage_10_2": 60.0
+        },
+        "max_family_income_inr": 600000,
+        "domicile": "India",
+        "exclusions": "Children of Aditya Birla Group employees are ineligible"
+      }
+    },
+    {
+      "id": "SCH_IITB_MEANS_CUM_MERIT",
+      "name": "IIT Bombay Merit-cum-Means (MCM) Scholarship",
+      "provider": "Indian Institute of Technology, Bombay",
+      "category": "Institutional / Need-Based",
+      "official_url": "https://www.iitb.ac.in",
+      "target_courses": ["B.Tech", "Dual Degree (B.Tech + M.Tech)", "B.S."],
+      "financial_aid": {
+        "tuition_waiver": "100% tuition fee waiver",
+        "annual_allowance_inr": 10000
+      },
+      "eligibility_criteria": {
+        "max_family_income_inr": 500000,
+        "category_restriction": ["General", "OBC-NCL", "EWS"],
+        "academic_performance": {
+          "cgpa_maintenance_cutoff": 6.0
+        },
+        "institutional_requirement": "Enrolled as a full-time undergraduate student at IIT Bombay"
+      }
+    }
+  ]
+}

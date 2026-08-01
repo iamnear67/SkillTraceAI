@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkillTrace AI — Multimodal student competency vectorization, Socratic TeachBack AI, career recommendation engine, and verified credential ledger for K-12 students.">
+  <title>SkillTrace AI — Student Competency & Career Application</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="app-layout">
+
+  <!-- Ambient Motion Background Elements -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+  <div class="ambient-blob ambient-blob-1" aria-hidden="true"></div>
+  <div class="ambient-blob ambient-blob-2" aria-hidden="true"></div>
+  <div class="spotlight-overlay" id="spotlight-overlay" aria-hidden="true"></div>
+  <div id="toast-container" class="toast-container" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ── 1. App Sidebar Navigation ────────────────────────────────────────── -->
+  <aside class="app-sidebar" role="navigation" aria-label="Main navigation">
+    <div>
+      <a href="index.html" class="brand-logo" style="padding: var(--space-2) var(--space-1);" aria-label="SkillTrace AI home">
+        <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
+        <span>SkillTrace <span class="text-gradient-cyan">AI</span></span>
+      </a>
+
+      <ul class="sidebar-nav" role="list">
+        <li>
+          <a class="sidebar-link active" data-view="dashboard" role="button" aria-label="Dashboard overview" aria-current="page">
+            <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-link" data-view="upload" role="button" aria-label="Upload Certificate">
+            <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+            <span>Upload Certificate</span>
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-link" data-view="analysis" role="button" aria-label="Vector Analysis">
+            <i class="fa-solid fa-microscope" aria-hidden="true"></i>
+            <span>Vector Analysis</span>
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-link" data-view="careers" role="button" aria-label="Career Engine">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            <span>Career Engine</span>
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-link" data-view="teachback" role="button" aria-label="TeachBack AI Socratic Engine">
+            <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+            <span>TeachBack AI</span>
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-link" data-view="portfolio" role="button" aria-label="Student Profile Portfolio">
+            <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+            <span>Student Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="entrance.html" class="sidebar-link" style="color: var(--amber);" aria-label="Entrance Engine Module">
+            <i class="fa-solid fa-flask" style="color: var(--amber);" aria-hidden="true"></i>
+            <span>Entrance Engine</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="badge badge-glow" style="width: 100%; justify-content: center; margin-bottom: 12px; font-size: 0.75rem;">
+        <span class="dot-pulse" aria-hidden="true"></span> Gemini 1.5 Flash Active
+      </div>
+
+      <div class="user-profile-badge" role="status" aria-label="Current user profile">
+        <div class="avatar" aria-hidden="true">AS</div>
+        <div class="user-profile-info">
+          <div style="font-weight: 700; font-size: 0.9rem;">Arjun Sharma</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">Grade 11 • STEM Stream</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── 2. Main Application Area ─────────────────────────────────────────── -->
+  <main class="app-main" role="main" id="app-main">
+
+    <!-- Floating Top Bar for Demo Profile Toggle & Navigation -->
+    <div style="position: sticky; top: 0; zIndex: 100; background: rgba(5,8,19,0.92); backdrop-filter: blur(12px); padding: 10px 24px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
+      <div id="demo-profile-banner" style="display: flex; align-items: center; gap: 12px; background: rgba(0,242,254,0.08); border: 1px solid rgba(0,242,254,0.3); padding: 6px 16px; border-radius: 30px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #00f2fe; box-shadow: 0 0 10px #00f2fe;"></span>
+        <span id="demo-banner-text" style="font-size: 0.85rem; font-weight: 700; color: #fff;">This is a demo profile......</span>
+        <button id="demo-toggle-btn" class="btn btn-primary btn-sm" style="padding: 4px 12px; font-size: 0.75rem; border-radius: 20px; font-weight: 800;">Make your own</button>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button onclick="window.print()" class="btn btn-glass btn-sm" style="font-weight: 700;">
+          <i class="fa-solid fa-file-pdf" style="color: var(--cyan);"></i> Download PDF / CV
+        </button>
+        <a href="index.html" class="btn btn-glass btn-sm" style="padding: 6px 14px; font-weight: 700; color: #fff;">
+          <i class="fa-solid fa-arrow-left"></i> Home
+        </a>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 1: DASHBOARD OVERVIEW
+         ==================================================================== -->
+    <section class="app-view active" id="view-dashboard">
+      <div class="view-header">
+        <div>
+          <h1 class="view-title" id="welcome-title">Welcome back, Arjun 👋</h1>
+          <p class="view-subtitle">Target Stream: <strong style="color: var(--cyan);" id="welcome-stream">Engineering & Computer Science</strong></p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+          <select id="persona-selector" class="input" style="padding: 6px 12px; font-size: 0.85rem; background: rgba(0,242,254,0.08); border-color: var(--border-glow); color: var(--cyan); font-weight: 700; border-radius: 8px;">
+            <option value="arjun_sharma">👤 Arjun (AI / STEM)</option>
+            <option value="priya_patel">🧬 Priya (Pre-Med & Bio)</option>
+            <option value="ananya_roy">💼 Ananya (Business & FinTech)</option>
+            <option value="rohan_verma">🎨 Rohan (Design & UI/UX)</option>
+            <option value="kabir_das">⚖️ Kabir (Law & Diplomacy)</option>
+          </select>
+          <a href="entrance.html" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-flask"></i> Entrance Engine
+          </a>
+        </div>
+      </div>
+
+      <!-- KPI Cards Grid -->
+      <div class="kpi-grid" role="list" aria-label="Key performance indicators">
+        <div class="glass-card kpi-card glow-card stagger-1" role="listitem">
+          <div class="kpi-header">
+            <span class="kpi-title">Overall Readiness</span>
+            <i class="fa-solid fa-chart-line" style="color: var(--cyan);" aria-hidden="true"></i>
+          </div>
+          <div class="kpi-value text-gradient-cyan">84.2%</div>
+          <div class="kpi-trend"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +12.4% this month</div>
+        </div>
+
+        <div class="glass-card kpi-card stagger-2" role="listitem">
+          <div class="kpi-header">
+            <span class="kpi-title">Verified Credentials</span>
+            <i class="fa-solid fa-certificate" style="color: var(--emerald);" aria-hidden="true"></i>
+          </div>
+          <div class="kpi-value">14</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">Zero manual entry errors</div>
+        </div>
+
+        <div class="glass-card kpi-card stagger-3" role="listitem">
+          <div class="kpi-header">
+            <span class="kpi-title">Dominant Pillar</span>
+            <i class="fa-solid fa-atom" style="color: var(--purple);" aria-hidden="true"></i>
+          </div>
+          <div class="kpi-value" style="color: var(--purple);">STEM</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">Score: 88.0 / 100</div>
+        </div>
+
+        <div class="glass-card kpi-card stagger-4" role="listitem">
+          <div class="kpi-header">
+            <span class="kpi-title">Top Career Match</span>
+            <i class="fa-solid fa-laptop-code" style="color: var(--amber);" aria-hidden="true"></i>
+          </div>
+          <div class="kpi-value" style="font-size: 1.5rem; margin-top: 4px;">CompSci</div>
+          <div style="font-size: 0.8rem; color: var(--amber); margin-top: 6px; font-weight: 600;">89.6% Compatibility</div>
+        </div>
+      </div>
+
+      <!-- Central Radar & Insights Grid -->
+      <div class="bento-grid" style="margin-bottom: var(--space-4);">
+        <!-- SVG Competency Radar Widget -->
+        <div class="bento-col-6 glass-card glow-card" style="padding: var(--space-3);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.1rem;"><i class="fa-solid fa-chart-radar" style="color: var(--cyan);"></i> Canonical Competency Radar</h3>
+            <span class="badge" style="font-size: 0.75rem;">5 Pillars Normalized</span>
+          </div>
+
+          <div class="radar-widget-container">
+            <!-- Inline SVG Polygon Radar Chart -->
+            <svg width="280" height="260" viewBox="0 0 300 280">
+              <!-- Pentagon Grid Lines -->
+              <polygon points="150,20 270,110 225,240 75,240 30,110" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+              <polygon points="150,55 234,118 202,209 98,209 66,118" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+              <polygon points="150,90 198,126 180,178 120,178 102,126" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+
+              <!-- Axis Lines -->
+              <line x1="150" y1="140" x2="150" y2="20" stroke="rgba(255,255,255,0.1)" />
+              <line x1="150" y1="140" x2="270" y2="110" stroke="rgba(255,255,255,0.1)" />
+              <line x1="150" y1="140" x2="225" y2="240" stroke="rgba(255,255,255,0.1)" />
+              <line x1="150" y1="140" x2="75" y2="240" stroke="rgba(255,255,255,0.1)" />
+              <line x1="150" y1="140" x2="30" y2="110" stroke="rgba(255,255,255,0.1)" />
+
+              <!-- Student Score Data Polygon -->
+              <polygon points="150,35 248,116 195,215 90,210 50,115" fill="rgba(0, 242, 254, 0.25)" stroke="#00f2fe" stroke-width="2.5" />
+
+              <!-- Labels -->
+              <text x="150" y="12" fill="#00f2fe" font-size="11" font-weight="700" text-anchor="middle">STEM (88)</text>
+              <text x="278" y="114" fill="#f8fafc" font-size="10" text-anchor="start">Analytical (82)</text>
+              <text x="232" y="255" fill="#f8fafc" font-size="10" text-anchor="middle">Leadership (55)</text>
+              <text x="68" y="255" fill="#f8fafc" font-size="10" text-anchor="middle">Comm (65)</text>
+              <text x="22" y="114" fill="#f8fafc" font-size="10" text-anchor="end">Creativity (60)</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- AI Insights & Strategic Roadmap -->
+        <div class="bento-col-6 glass-card" style="padding: var(--space-3); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+              <i class="fa-solid fa-sparkles" style="color: var(--cyan);"></i>
+              <h3 style="font-size: 1.1rem;">Gemini Strategic Insights</h3>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
+              "Arjun's <strong>STEM (88)</strong> and <strong>Analytical Thinking (82)</strong> scores place him in the 94th percentile for Computer Science & Engineering stream readiness. Leadership competencies are progressing well through MUN achievements."
+            </p>
+          </div>
+
+          <div style="background: rgba(0, 242, 254, 0.05); border: 1px solid var(--border-cyan-glow); border-radius: var(--radius-md); padding: 14px;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--cyan); margin-bottom: 6px;">
+              🎯 Immediate Recommended Action:
+            </div>
+            <div style="font-size: 0.88rem; color: var(--text-primary);">
+              Complete an advanced competitive programming module to close the remaining gap for Tier-1 CS admissions.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Timeline & Career Match Cards -->
+      <div class="bento-grid">
+        <div class="bento-col-7 glass-card" style="padding: var(--space-3);">
+          <h3 style="font-size: 1.1rem; margin-bottom: 16px;"><i class="fa-solid fa-clock-rotate-left"></i> Verified Credentials Timeline</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div>
+                <div style="font-weight: 700; font-size: 0.9rem;">1st Place - National Science Olympiad</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">IIT Bombay • National Level • March 2024</div>
+              </div>
+              <span class="badge" style="background: rgba(16,185,129,0.15); color: var(--emerald); font-size: 0.7rem;">98.4% Verified</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              <div>
+                <div style="font-weight: 700; font-size: 0.9rem;">Winner - National Robotics AI Hackathon</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">ACM Student Chapter • National Level • May 2024</div>
+              </div>
+              <span class="badge" style="background: rgba(16,185,129,0.15); color: var(--emerald); font-size: 0.7rem;">96.8% Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-col-5 glass-card" style="padding: var(--space-3);">
+          <h3 style="font-size: 1.1rem; margin-bottom: 16px;"><i class="fa-solid fa-bullseye"></i> Top Career Compatibility</h3>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span>Computer Science</span>
+              <span style="font-weight: 700; color: var(--cyan);">89.6% Fit</span>
+            </div>
+            <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 89.6%;"></div></div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+              <span>Engineering</span>
+              <span style="font-weight: 700; color: var(--blue);">84.2% Fit</span>
+            </div>
+            <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 84.2%;"></div></div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+              <span>Business & Strategy</span>
+              <span style="font-weight: 700; color: var(--purple);">52.0% Fit</span>
+            </div>
+            <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 52%; background: var(--grad-accent);"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 2: CERTIFICATE UPLOAD & PARSER
+         ==================================================================== -->
+    <section class="app-view" id="view-upload">
+      <div class="view-header">
+        <div>
+          <h1 class="view-title">Upload & Parse Certificate</h1>
+          <p class="view-subtitle">Multimodal Vision AI extracts credentials, cleans null values, and maps skill vectors.</p>
+        </div>
+      </div>
+
+      <div class="glass-card glow-card" style="padding: var(--space-6); text-align: center;">
+        <!-- Large Drag-Drop Area -->
+        <div id="app-upload-dropzone" class="demo-upload-box" style="min-height: 280px;">
+          <i class="fa-solid fa-cloud-arrow-up" style="font-size: 3.5rem; color: var(--cyan); margin-bottom: 16px;"></i>
+          <h3 style="margin-bottom: 6px;">Drag & Drop Certificate or Marksheet</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Supports JPG, PNG, JPEG, PDF up to 20 MB</p>
+
+          <div style="margin-top: 24px;">
+            <span style="font-size: 0.8rem; color: var(--text-secondary); display: block; margin-bottom: 10px;">Or test with a pre-loaded sample document:</span>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+              <button class="btn btn-glass btn-sm upload-sample-btn" data-sample-name="Science_Olympiad_Gold.pdf">
+                <i class="fa-solid fa-file-pdf" style="color: var(--rose);"></i> Science Olympiad PDF
+              </button>
+              <button class="btn btn-glass btn-sm upload-sample-btn" data-sample-name="AI_Robotics_Winner.png">
+                <i class="fa-solid fa-file-image" style="color: var(--cyan);"></i> AI Robotics Image
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated Progress Box -->
+        <div id="upload-progress-box" style="display: none; margin-top: 24px; padding: 20px; background: rgba(0,0,0,0.5); border-radius: var(--radius-md);">
+          <div id="upload-step-text" style="font-weight: 600; color: var(--cyan); margin-bottom: 10px;">
+            Step 1/4: Validating file magic bytes and size...
+          </div>
+          <div class="meter-bar-bg" style="height: 10px;">
+            <div id="upload-progress-bar-fill" class="meter-bar-fill" style="width: 25%;"></div>
+          </div>
+        </div>
+
+        <!-- Instant Extraction Preview -->
+        <div id="upload-preview-box" style="display: none; margin-top: 24px; text-align: left;" class="glass-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span style="font-weight: 700; color: var(--emerald);"><i class="fa-solid fa-circle-check"></i> Extraction & Validation Complete</span>
+            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--emerald);">98.4% AI Confidence</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px;">
+            <div class="cert-thumbnail">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+
+            <div>
+              <h3 style="margin-bottom: 8px;">1st Place - National Science Olympiad</h3>
+              <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;">
+                Issued by: <strong style="color: var(--text-primary);">Indian Institute of Technology (IIT)</strong> • Level: <span class="badge">National</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+                Date: 2024-03-15 • Category: STEM
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px;">Parsed Skills:</span>
+                <span class="badge">Physics</span>
+                <span class="badge">Mathematics</span>
+                <span class="badge">Problem Solving</span>
+                <span class="badge">Critical Thinking</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; text-align: right;">
+            <a href="#" class="btn btn-primary" data-switch-view="analysis">
+              Run Full Vector Analysis <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 3: ANALYSIS VECTOR INSPECTOR
+         ==================================================================== -->
+    <section class="app-view" id="view-analysis">
+      <div class="view-header">
+        <div>
+          <h1 class="view-title">Competency Vector Analysis</h1>
+          <p class="view-subtitle">Raw AI JSON normalized into 5-pillar vectors and stream benchmark targets.</p>
+        </div>
+      </div>
+
+      <div class="bento-grid" style="margin-bottom: var(--space-4);">
+        <!-- Metadata Header Card -->
+        <div class="bento-col-8 glass-card glow-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+              <span class="badge badge-glow" style="margin-bottom: 8px;">STEM Category</span>
+              <h2 style="font-size: 1.6rem;">1st Place - National Science Olympiad</h2>
+              <div style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 4px;">
+                Issuer: Central Board of Secondary Education (CBSE) / IIT Bombay
+              </div>
+            </div>
+            <div class="progress-ring-container">
+              <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.08)" stroke-width="8" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="#00f2fe" stroke-width="8" fill="none" stroke-dasharray="251" stroke-dashoffset="30" class="progress-ring-circle" />
+              </svg>
+              <div class="progress-ring-text" style="font-size: 1.2rem; color: var(--cyan);">98%</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <span class="badge">Date: 2024-03-15</span>
+            <span class="badge">Level: National</span>
+            <span class="badge">Multipliers: 1.25x Applied</span>
+          </div>
+        </div>
+
+        <!-- Validation Audit Log Drawer -->
+        <div class="bento-col-4 glass-card" style="padding: var(--space-3);">
+          <h3 style="font-size: 1rem; margin-bottom: 12px; color: var(--emerald);"><i class="fa-solid fa-shield-check"></i> Validation Audit Log</h3>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem; color: var(--text-secondary);">
+            <div>✓ Normalized date '15th March 2024' → '2024-03-15'</div>
+            <div>✓ Fuzzy-matched level 'nation wide' → 'National'</div>
+            <div>✓ Expanded issuer 'cbse' → 'Central Board...'</div>
+            <div>✓ Deduplicated 2 redundant skill entries</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Pillar Vector Breakdown Cards -->
+      <div class="bento-grid">
+        <div class="bento-col-12 glass-card">
+          <h3 style="font-size: 1.2rem; margin-bottom: 20px;"><i class="fa-solid fa-sliders" style="color: var(--cyan);"></i> Normalized 5-Pillar Competency Breakdown</h3>
+          
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; text-align: center;">
+            <div style="background: rgba(0, 242, 254, 0.05); border: 1px solid var(--border-cyan-glow); padding: 16px; border-radius: var(--radius-md);">
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">STEM</div>
+              <div style="font-size: 2rem; font-weight: 800; color: var(--cyan); margin: 6px 0;">87.5</div>
+              <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 87.5%;"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 16px; border-radius: var(--radius-md);">
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">ANALYTICAL</div>
+              <div style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">76.2</div>
+              <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 76.2%;"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 16px; border-radius: var(--radius-md);">
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">LEADERSHIP</div>
+              <div style="font-size: 2rem; font-weight: 800; color: var(--purple); margin: 6px 0;">64.0</div>
+              <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 64%; background: var(--grad-accent);"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 16px; border-radius: var(--radius-md);">
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">COMMUNICATION</div>
+              <div style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">58.0</div>
+              <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 58%;"></div></div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 16px; border-radius: var(--radius-md);">
+              <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">CREATIVITY</div>
+              <div style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">52.0</div>
+              <div class="meter-bar-bg"><div class="meter-bar-fill" style="width: 52%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 4: CAREER RECOMMENDATION ENGINE
+         ==================================================================== -->
+    <section class="app-view" id="view-careers">
+      <div class="view-header">
+        <div>
+          <h1 class="view-title">Career & Stream Recommendations</h1>
+          <p class="view-subtitle">Weighted pillar matching with explicit strength reasons, skill gaps, and next action steps.</p>
+        </div>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Computer Science Card -->
+        <div class="bento-col-6 glass-card glow-card" style="padding: var(--space-4);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+              <span class="badge badge-glow" style="margin-bottom: 6px;">Top Fit</span>
+              <h2 style="font-size: 1.5rem;">Computer Science 💻</h2>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--cyan);">89.6%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Compatibility Score</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--emerald); margin-bottom: 6px;">Key Strengths:</div>
+            <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 18px;">
+              <li>Strong STEM score (87.5) meets requirement threshold of 65.</li>
+              <li>Demonstrated skill in 'Python' and 'Algorithms'.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--rose); margin-bottom: 6px;">Identified Skill Gaps:</div>
+            <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 18px;">
+              <li>Advanced Data Structures & LeetCode Medium Practice.</li>
+            </ul>
+          </div>
+
+          <div style="padding: 12px; background: rgba(0, 242, 254, 0.05); border-radius: var(--radius-sm); border-left: 3px solid var(--cyan);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--cyan);">[Priority Action Step]</div>
+            <div style="font-size: 0.85rem; color: var(--text-primary); margin-top: 2px;">
+              Complete CS50 and publish 2 open-source projects on GitHub.
+            </div>
+          </div>
+        </div>
+
+        <!-- Engineering Card -->
+        <div class="bento-col-6 glass-card" style="padding: var(--space-4);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+              <span class="badge" style="margin-bottom: 6px;">High Fit</span>
+              <h2 style="font-size: 1.5rem;">Engineering ⚙️</h2>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--blue);">84.2%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Compatibility Score</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--emerald); margin-bottom: 6px;">Key Strengths:</div>
+            <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 18px;">
+              <li>Physics and Mathematics Olympiad distinction.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--amber); margin-bottom: 6px;">Identified Skill Gaps:</div>
+            <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 18px;">
+              <li>Hands-on Circuit Design & CAD fundamentals.</li>
+            </ul>
+          </div>
+
+          <div style="padding: 12px; background: rgba(79, 172, 254, 0.05); border-radius: var(--radius-sm); border-left: 3px solid var(--blue);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--blue);">[Priority Action Step]</div>
+            <div style="font-size: 0.85rem; color: var(--text-primary); margin-top: 2px;">
+              Participate in an Arduino or bridge-building engineering challenge.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 5: TEACHBACK AI SOCRATIC ENGINE
+         ==================================================================== -->
+    <section class="app-view" id="view-teachback">
+      <div class="view-header">
+        <div>
+          <h1 class="view-title">TeachBack AI Socratic Engine</h1>
+          <p class="view-subtitle">Interactive concept mastery testing through Socratic dialogue and misconception detection.</p>
+        </div>
+      </div>
+
+      <div class="bento-grid" style="margin-bottom: var(--space-4);">
+        <!-- Mastery Circle Header -->
+        <div class="bento-col-4 glass-card glow-card" style="text-align: center; padding: var(--space-4);">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 12px;">CONCEPT MASTERY SCORE</div>
+          
+          <div class="progress-ring-container" style="margin: 0 auto 16px auto; width: 150px; height: 150px;">
+            <svg width="150" height="150">
+              <circle cx="75" cy="75" r="60" stroke="rgba(255,255,255,0.08)" stroke-width="10" fill="none" />
+              <circle cx="75" cy="75" r="60" stroke="#00f2fe" stroke-width="10" fill="none" stroke-dasharray="377" stroke-dashoffset="83" class="progress-ring-circle" />
+            </svg>
+            <div class="progress-ring-text" style="color: var(--cyan);">78%</div>
+          </div>
+
+          <div style="font-weight: 700; font-size: 1.05rem;">Algorithms & Data Structures</div>
+          <div style="font-size: 0.8rem; color: var(--emerald); margin-top: 4px;">✓ 8 Concepts Verified</div>
+        </div>
+
+        <!-- Misconception Cards -->
+        <div class="bento-col-8 glass-card" style="padding: var(--space-3);">
+          <h3 style="font-size: 1.1rem; margin-bottom: 12px;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--amber);"></i> Identified Misconception Tracker</h3>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="padding: 12px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-sm);">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: var(--amber);">
+                <span>Recursion Stack Limits vs Time Complexity</span>
+                <span>Needs Reinforcement</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+                Student confused stack memory space (O(N)) with recursion call depth execution speed.
+              </div>
+            </div>
+
+            <div style="padding: 12px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm);">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: var(--emerald);">
+                <span>AVL Tree Rotations (LL vs LR)</span>
+                <span>Mastered</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+                Student accurately explained double rotation mechanics in response to Socratic question.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern AI Chat Interface -->
+      <div class="chat-container glow-card">
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-bubble chat-bubble-ai">
+            <strong>TeachBack AI:</strong> Welcome back Arjun! In your last evaluation, you demonstrated strong intuition for binary trees. <em>If a binary search tree becomes completely skewed, what is its worst-case search time complexity, and how does an AVL tree prevent this?</em>
+          </div>
+          <div class="chat-bubble chat-bubble-user">
+            A skewed BST degrades to O(N) linear time because it becomes like a linked list. An AVL tree keeps it balanced using rotations!
+          </div>
+          <div class="chat-bubble chat-bubble-ai">
+            <strong>TeachBack AI:</strong> Spot on! Now to test your depth: <em>When an AVL tree is left-heavy on a right child, why is a single rotation insufficient, requiring an LR double rotation instead?</em>
+          </div>
+        </div>
+
+        <div style="padding: 8px 16px; background: rgba(5,7,12,0.4); display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="font-size: 0.75rem; color: var(--text-muted); align-self: center;">Suggested Prompts:</span>
+          <span class="sample-pill prompt-pill" data-prompt="Explain LR double rotation step-by-step">Explain LR double rotation</span>
+          <span class="sample-pill prompt-pill" data-prompt="Test me on QuickSort worst case pivot selection">Test me on QuickSort pivot selection</span>
+        </div>
+
+        <div class="chat-input-bar">
+          <input type="text" id="chat-input" class="chat-input" placeholder="Type your Socratic response or concept explanation..." />
+          <button id="chat-send-btn" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 6: STUDENT PORTFOLIO
+         ==================================================================== -->
+    <section class="app-view" id="view-portfolio">
+      <div class="view-header">
+        <div>
+          <h1 class="view-title">Public Student Achievement Profile</h1>
+          <p class="view-subtitle">Verifiable credential ledger for university admissions and scholarship committees.</p>
+        </div>
+      </div>
+
+      <!-- Profile Header Banner -->
+      <div class="glass-card glow-card" style="padding: var(--space-4); margin-bottom: var(--space-4);">
+        <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+          <div class="avatar" style="width: 80px; height: 80px; font-size: 2rem;">AS</div>
+          <div style="flex: 1;">
+            <h2 style="font-size: 1.8rem;">Arjun Sharma</h2>
+            <div style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 4px;">
+              St. Francis High School • Class of 2026 • Target: B.Tech Computer Science / AI
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+              <span class="badge badge-glow">14 Verified Credentials</span>
+              <span class="badge">STEM Vector: 87.5 / 100</span>
+              <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--emerald);">Verifiable Ledger Signed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate Gallery Grid -->
+      <h3 style="font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-images"></i> Verified Certificate Gallery</h3>
+      
+      <div class="gallery-grid">
+        <div class="glass-card cert-card">
+          <div>
+            <div class="cert-thumbnail"><i class="fa-solid fa-award"></i></div>
+            <span class="badge" style="margin-bottom: 6px;">National Level</span>
+            <h4 style="font-size: 1rem; margin-bottom: 4px;">1st Place - National Science Olympiad</h4>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">IIT Bombay • March 2024</div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-top: 1px solid var(--border-subtle); padding-top: 8px;">
+            <span style="color: var(--emerald);">✓ 98.4% Confidence</span>
+            <span style="color: var(--cyan);">STEM Vector +18</span>
+          </div>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div>
+            <div class="cert-thumbnail" style="color: var(--purple); border-color: var(--border-purple-glow);"><i class="fa-solid fa-robot"></i></div>
+            <span class="badge" style="margin-bottom: 6px;">National Level</span>
+            <h4 style="font-size: 1rem; margin-bottom: 4px;">Winner - National Robotics AI Hackathon</h4>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">ACM Student Chapter • May 2024</div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-top: 1px solid var(--border-subtle); padding-top: 8px;">
+            <span style="color: var(--emerald);">✓ 96.8% Confidence</span>
+            <span style="color: var(--purple);">Analytical +15</span>
+          </div>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div>
+            <div class="cert-thumbnail" style="color: var(--amber);"><i class="fa-solid fa-comments"></i></div>
+            <span class="badge" style="margin-bottom: 6px;">International Level</span>
+            <h4 style="font-size: 1rem; margin-bottom: 4px;">Best Delegate - Youth MUN</h4>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">UN Youth Assembly • Feb 2024</div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-top: 1px solid var(--border-subtle); padding-top: 8px;">
+            <span style="color: var(--emerald);">✓ 97.5% Confidence</span>
+            <span style="color: var(--amber);">Leadership +22</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="api.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "engine_name": "Antigravity Learning and Decay Curves Engine",
+  "engine_version": "2.1.0",
+  "task_identifier": "TASK_2_CURVE_CALIBRATION",
+  
+  "model_specifications": {
+    "acquisition_model": {
+      "type": "GOMPERTZ_GROWTH",
+      "formula": "M(k) = K * exp(-b * exp(-alpha * k))",
+      "description": "Asymmetric cognitive skill acquisition modeling slow start, rapid breakthrough, and upper asymptotic saturation.",
+      "parameters": {
+        "asymptote_K_range": [0.50, 1.00],
+        "default_b_displacement": 2.50,
+        "token_scaling_factor": 1.0
+      }
+    },
+    
+    "decay_model": {
+      "type": "MODIFIED_FSRS_DSR",
+      "formula": "R(t, S) = (1 + 0.19 * (t / S))^-1",
+      "description": "Two-component memory model computing probability of recall (Retrievability R) given stability S in days.",
+      "fsrs_empirical_constants": {
+        "w0_initial_stability_forgot": 0.4,
+        "w1_initial_stability_hard": 1.2,
+        "w2_initial_stability_good": 3.1,
+        "w3_initial_stability_easy": 8.5,
+        "c1_stability_growth": 0.90,
+        "c2_retrievability_factor": 0.20,
+        "c3_stability_decay": 0.50,
+        "c4_lapse_factor": 0.20
+      }
+    },
+
+    "combined_mastery_model": {
+      "formula": "P(t, k) = M(k) * R(t - t_0, S)",
+      "description": "Net predicted performance at time t given k tokens spent at t_0."
+    },
+
+    "uncertainty_engine": {
+      "formula": "variance = prior_variance * exp(-0.15 * observations_count)",
+      "confidence_score_formula": "C = 1.0 - sqrt(variance)",
+      "credible_interval_z_score_95": 1.96
+    }
+  }
+}

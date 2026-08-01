@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "title": "Scholarships Dataset: Indian Universities, Coaching Centres, Abroad Programs & Hackathon Grants",
+    "last_updated": "2026-07-29",
+    "disclaimer": "Amounts, deadlines, and eligibility change frequently. Always verify on the official website before applying/building features around this data.",
+    "currency_note": "INR = Indian Rupees, USD = US Dollars, GBP = British Pounds, EUR = Euros"
+  },
+  "indian_universities": [
+    {
+      "name": "Ashoka University",
+      "location": "Sonipat, Haryana, India",
+      "type": "Private University",
+      "scholarship_program": "Achievers' Merit Scholarship & Special Merit Scholarship",
+      "scholarship_amount": "Up to 100% tuition fee waiver",
+      "eligibility": "98+ percentile in JEE Mains, top 2000 in IISER IAT, top 100 in CMI entrance, or INO Training Camp qualifiers",
+      "covers_travel": false,
+      "website": "https://www.ashoka.edu.in"
+    },
+    {
+      "name": "Chandigarh University",
+      "location": "Gharuan, Punjab, India",
+      "type": "Private University",
+      "scholarship_program": "CUCET / CUET Merit Scholarship",
+      "scholarship_amount": "Up to 100% tuition fee waiver (also region-specific schemes, e.g. Ladakh scholarship pool worth INR 1.5 Crore)",
+      "eligibility": "9.0+ CGPA, CUET/CUCET merit rank, or regional criteria",
+      "covers_travel": false,
+      "website": "https://www.cuchd.in/scholarship/"
+    },
+    {
+      "name": "Geeta University",
+      "location": "Panipat, Haryana, India",
+      "type": "Private University",
+      "scholarship_program": "GUTS Exam Scholarship",
+      "scholarship_amount": "Up to 100% scholarship (pool worth INR 24 Crore)",
+      "eligibility": "Performance in Geeta University Talent Search (GUTS) exam",
+      "covers_travel": false,
+      "website": "https://geetauniversity.edu.in"
+    },
+    {
+      "name": "Indian Institutes of Technology (IITs) / NITs",
+      "location": "Multiple campuses, India",
+      "type": "Public/Government Institute",
+      "scholarship_program": "Central Sector Scheme of Scholarships (CSSS) / Institute Merit-cum-Means",
+      "scholarship_amount": "Full tuition waiver + maintenance allowance for income-eligible students",
+      "eligibility": "Admission via JEE + family income and merit criteria",
+      "covers_travel": false,
+      "website": "https://www.education.gov.in"
+    },
+    {
+      "name": "IGNOU (Indira Gandhi National Open University)",
+      "location": "New Delhi, India",
+      "type": "Public University",
+      "scholarship_program": "Indira Gandhi Scholarship for Doctoral Studies (for international students)",
+      "scholarship_amount": "Fully funded PhD (tuition + research support)",
+      "eligibility": "International applicants demonstrating academic merit",
+      "covers_travel": false,
+      "website": "https://www.ignou.ac.in"
+    },
+    {
+      "name": "Sathyabama Institute of Science and Technology",
+      "location": "Chennai, Tamil Nadu, India",
+      "type": "Deemed University",
+      "scholarship_program": "Merit Scholarship for International Students",
+      "scholarship_amount": "Up to 75% tuition fee coverage",
+      "eligibility": "Academic excellence, engineering/technology/applied sciences applicants",
+      "covers_travel": false,
+      "website": "https://www.sathyabama.ac.in"
+    },
+    {
+      "name": "Reliance Foundation Undergraduate Scholarship",
+      "location": "Pan-India (any recognized Indian university)",
+      "type": "Private Foundation Program",
+      "scholarship_program": "Reliance Foundation Scholars Program",
+      "scholarship_amount": "Up to INR 2,00,000 over the course duration",
+      "eligibility": "Merit + household income cutoff up to INR 15 Lakhs annually",
+      "covers_travel": false,
+      "website": "https://scholarships.reliancefoundation.org"
+    }
+  ],
+  "indian_coaching_centres": [
+    {
+      "name": "Allen Career Institute",
+      "location": "Kota (HQ) + Pan-India centres",
+      "focus": "JEE, NEET",
+      "scholarship_test": "ALLEN Scholarship-cum-Admission Test (ASAT), TALLENTEX, ALLEN Champ",
+      "scholarship_amount": "Up to 90-100% fee waiver for top scorers (85%+ in ASAT typically qualifies)",
+      "eligibility": "Classes 6-12 / droppers; based on test score or Olympiad/NTSE credentials",
+      "website": "https://www.allen.ac.in"
+    },
+    {
+      "name": "Aakash Educational Services (AESL)",
+      "location": "Pan-India centres",
+      "focus": "JEE, NEET, Foundation (Classes 7-12)",
+      "scholarship_test": "Admission Cum Scholarship Test (ACST/iACST), Aakash National Talent Hunt Exam (ANTHE)",
+      "scholarship_amount": "Up to 100% fee waiver on classroom courses",
+      "eligibility": "Classes 7-12 students, based on test percentile",
+      "website": "https://www.aakash.ac.in"
+    },
+    {
+      "name": "FIITJEE",
+      "location": "Pan-India centres",
+      "focus": "JEE (Mains + Advanced)",
+      "scholarship_test": "FIITJEE Talent Reward Exam (FTRE)",
+      "scholarship_amount": "Fee reductions up to 50% or more for top rankers",
+      "eligibility": "Classes 5-12, based on FTRE performance",
+      "website": "https://www.fiitjee.com"
+    },
+    {
+      "name": "Resonance",
+      "location": "Kota (HQ) + Pan-India centres",
+      "focus": "JEE, NEET, Olympiads, NTSE, KVPY, BITSAT",
+      "scholarship_test": "ResoNET / ResoFAST",
+      "scholarship_amount": "Up to 100% scholarship on classroom programs",
+      "eligibility": "Classes 5-12, based on academic standing and test score",
+      "website": "https://www.resonance.ac.in"
+    },
+    {
+      "name": "Narayana Group",
+      "location": "Pan-India centres",
+      "focus": "JEE, NEET, Foundation",
+      "scholarship_test": "Narayana Scholarship Admission Test (NSAT)",
+      "scholarship_amount": "30% to 100% fee waiver",
+      "eligibility": "Merit-based, class and course dependent",
+      "website": "https://www.narayanagroup.com"
+    },
+    {
+      "name": "Physics Wallah (PW)",
+      "location": "Online + expanding offline Vidyapeeth centres",
+      "focus": "JEE, NEET, Foundation (low-cost model)",
+      "scholarship_test": "PW Scholarship Admission Test (PWSAT)",
+      "scholarship_amount": "Up to 100% scholarship; base fees already low (from ~INR 20,000/year)",
+      "eligibility": "Merit-based test performance",
+      "website": "https://www.pw.live"
+    }
+  ],
+  "abroad_scholarships_covering_travel": [
+    {
+      "name": "Chevening Scholarship",
+      "country": "United Kingdom",
+      "funded_by": "UK Government (FCDO)",
+      "degree_level": "One-year Master's",
+      "coverage": "Full tuition, monthly living allowance, return economy airfare, arrival/departure allowance, visa costs",
+      "covers_travel": true,
+      "eligibility": "2+ years work experience, leadership potential, return-to-home-country commitment",
+      "typical_application_window": "Autumn to winter (opens ~Aug, closes ~Oct/Nov cycle-dependent)",
+      "website": "https://www.chevening.org"
+    },
+    {
+      "name": "Commonwealth Scholarship (Master's/PhD)",
+      "country": "United Kingdom",
+      "funded_by": "UK Government via Commonwealth Scholarship Commission",
+      "degree_level": "Master's, PhD",
+      "coverage": "Full tuition, airfare, monthly living allowance, thesis/study grants",
+      "covers_travel": true,
+      "eligibility": "Indian citizens, development-relevant subjects, preference for financially disadvantaged applicants, nominated via India's Ministry of Education",
+      "typical_application_window": "Deadline typically end of January / May depending on category",
+      "website": "https://cscuk.fcdo.gov.uk"
+    },
+    {
+      "name": "DAAD Scholarships",
+      "country": "Germany",
+      "funded_by": "German Academic Exchange Service",
+      "degree_level": "Master's, PhD, Research stays (~19 programs for Indian applicants)",
+      "coverage": "Monthly stipend, travel allowance, health insurance, tuition support (most German public universities have no/low tuition)",
+      "covers_travel": true,
+      "eligibility": "Varies by program; generally strong academic record and relevant field",
+      "typical_application_window": "Varies by program, often Oct-Nov",
+      "website": "https://www.daad.de"
+    },
+    {
+      "name": "Erasmus Mundus Joint Master's Degree (EMJMD)",
+      "country": "European Union (multi-country)",
+      "funded_by": "European Union",
+      "degree_level": "Master's (study across 2-3+ EU countries)",
+      "coverage": "Full tuition, monthly stipend (~EUR 1,000), travel and installation costs, insurance",
+      "covers_travel": true,
+      "eligibility": "Open globally; competitive, strong academic profile",
+      "typical_application_window": "Varies by consortium, generally Oct-Jan",
+      "website": "https://education.ec.europa.eu/erasmus-mundus"
+    },
+    {
+      "name": "MEXT Scholarship (Monbukagakusho)",
+      "country": "Japan",
+      "funded_by": "Japanese Government (Ministry of Education)",
+      "degree_level": "Undergraduate, Master's, PhD, Research students",
+      "coverage": "Full tuition, monthly stipend, round-trip airfare",
+      "covers_travel": true,
+      "eligibility": "Age limits apply, strong academic record, via Indian embassy application",
+      "typical_application_window": "Around April-May",
+      "website": "https://www.in.emb-japan.go.jp"
+    },
+    {
+      "name": "Fulbright-Nehru Fellowship",
+      "country": "United States",
+      "funded_by": "US-India Educational Foundation (USIEF)",
+      "degree_level": "Master's, PhD, Postdoctoral, Research fellowships",
+      "coverage": "Full tuition, living stipend, round-trip airfare, health insurance",
+      "covers_travel": true,
+      "eligibility": "Indian citizens, strong academic/professional record",
+      "typical_application_window": "Deadlines vary by category; APEX Fellowship around July",
+      "website": "https://www.usief.org.in"
+    },
+    {
+      "name": "Gates Cambridge Scholarship",
+      "country": "United Kingdom (University of Cambridge)",
+      "funded_by": "Bill & Melinda Gates Foundation",
+      "degree_level": "Postgraduate, PhD",
+      "coverage": "Full tuition, living costs, airfare, academic expenses",
+      "covers_travel": true,
+      "eligibility": "Outstanding academic record, admission to Cambridge required first",
+      "typical_application_window": "Around October-December",
+      "website": "https://www.gatescambridge.org"
+    },
+    {
+      "name": "Inlaks Shivdasani Scholarship",
+      "country": "USA / UK / Europe (for Indian students going abroad)",
+      "funded_by": "Inlaks Shivdasani Foundation (India)",
+      "degree_level": "Master's, PhD",
+      "coverage": "Up to USD 100,000 covering tuition, living expenses, and travel",
+      "covers_travel": true,
+      "eligibility": "Indian citizens under 30, admission to a top-ranked university abroad",
+      "typical_application_window": "Around March each year",
+      "website": "https://www.inlaksfoundation.org"
+    },
+    {
+      "name": "Rhodes Scholarship",
+      "country": "United Kingdom (University of Oxford)",
+      "funded_by": "Rhodes Trust",
+      "degree_level": "Postgraduate",
+      "coverage": "Full tuition, living stipend, airfare",
+      "covers_travel": true,
+      "eligibility": "Exceptional academic and leadership record, age limits apply",
+      "typical_application_window": "Around July-August",
+      "website": "https://www.rhodeshouse.ox.ac.uk"
+    }
+  ],
+  "hackathon_related_scholarships_and_travel_grants": [
+    {
+      "name": "Smart India Hackathon (SIH)",
+      "organizer": "Ministry of Education (India) + AICTE",
+      "country": "India (nationwide, nodal centres)",
+      "prize_structure": "INR 1,00,000 per winning problem statement (varies by cycle)",
+      "travel_support": "Finalist teams travel to nodal/grand finale centres; travel and stay typically arranged/supported by host institutions",
+      "eligibility": "Students enrolled in Indian colleges/universities, teams of ~6 with mentors",
+      "website": "https://sih.gov.in"
+    },
+    {
+      "name": "MLH Fellowship & Member Event Scholarships",
+      "organizer": "Major League Hacking (MLH)",
+      "country": "Global (includes India-based participants at global/virtual hackathons)",
+      "prize_structure": "Varies by event; MLH Fellowship offers a paid, structured program (not a cash prize)",
+      "travel_support": "Select organizer/participant travel reimbursements at MLH Member Events (varies per event/year)",
+      "eligibility": "Students, varies by specific fellowship track (open source, production engineering, etc.)",
+      "website": "https://mlh.io"
+    },
+    {
+      "name": "Independent/Sponsor-funded Indian Hackathons (e.g., university & startup-hosted events)",
+      "organizer": "Various (IITs, private universities, startups, corporates)",
+      "country": "India",
+      "prize_structure": "Ranges widely, e.g. INR 35,000 to INR 12.9 Lakh+ prize pools depending on scale/sponsor",
+      "travel_support": "Case-by-case; larger/national-level events sometimes cover finalist travel and accommodation",
+      "eligibility": "Typically open to undergraduate/graduate students; varies per event",
+      "website": "https://www.startupgrantsindia.com/competitions/type/hackathon"
+    },
+    {
+      "name": "Global Online Hackathons with Cash Prizes (e.g., Devpost-hosted, corporate-sponsored)",
+      "organizer": "Various tech companies and platforms (e.g., Google Cloud, Microsoft-affiliated events)",
+      "country": "Global (online, open to Indian participants)",
+      "prize_structure": "USD 300 to USD 25,000+ depending on sponsor and scale",
+      "travel_support": "Rare for fully-online events; some finals (e.g., in-person buildathons) fly in top teams",
+      "eligibility": "Varies; often open globally to students and early-career developers",
+      "website": "https://devpost.com/hackathons"
+    }
+  ]
+}
