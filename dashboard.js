@@ -323,6 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const realFileInput = document.getElementById('real-file-input');
+
   uploadSampleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const name = btn.getAttribute('data-sample-name');
@@ -330,9 +332,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  uploadDropzone?.addEventListener('click', () => {
-    triggerRealUpload("Custom_Upload.png");
-  });
+  if (realFileInput) {
+    realFileInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files.length > 0) {
+        triggerRealUpload(e.target.files[0]);
+      }
+    });
+  }
+
+  if (uploadDropzone) {
+    uploadDropzone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadDropzone.style.borderColor = 'var(--cyan)';
+      uploadDropzone.style.background = 'rgba(0, 242, 254, 0.1)';
+    });
+
+    uploadDropzone.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      uploadDropzone.style.borderColor = 'var(--border-subtle)';
+      uploadDropzone.style.background = 'transparent';
+    });
+
+    uploadDropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadDropzone.style.borderColor = 'var(--border-subtle)';
+      uploadDropzone.style.background = 'transparent';
+      
+      if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+        realFileInput.files = e.dataTransfer.files;
+        triggerRealUpload(e.dataTransfer.files[0]);
+      }
+    });
+  }
 
   // ── 6. Phase 3 Socratic TeachBack AI Chat System (POST /teachback) ──────
   const chatMessages = document.getElementById('chat-messages');
